@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "module": "CommonJS",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
+    "removeComments": true,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "react"
+  },
+  "include": ["src/"]
+}
