@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import { Provider, useI18N } from '../src'
+import { Provider, useI18n } from '../src'
 
 it('No Provider is used', () => {
   const renderCountRef = {
@@ -9,26 +9,22 @@ it('No Provider is used', () => {
   }
 
   function Content() {
-    const { i18n, setI18N, withI18N } = useI18N()
+    const [t, { setI18n }] = useI18n()
 
     renderCountRef.current++
 
-    const { i18n: t } = withI18N({
-      locale: 'en',
-    })
-
     return (
       <>
-        <div id="text">{i18n('你好世界')}</div>
-        <div>{i18n('测试警告')}</div>
+        <div id="text">{t('你好世界')}</div>
         <div>{t('测试警告')}</div>
-        <button id="zhBtn" onClick={() => setI18N({ locale: 'zh' })}>
+        <div>{t('测试警告')}</div>
+        <button id="zhBtn" onClick={() => setI18n({ locale: 'zh' })}>
           简体中文
         </button>
-        <button id="enBtn" onClick={() => setI18N({ locale: 'en' })}>
+        <button id="enBtn" onClick={() => setI18n({ locale: 'en' })}>
           English
         </button>
-        <button id="unknownBtn" onClick={() => setI18N({ locale: undefined })}>
+        <button id="unknownBtn" onClick={() => setI18n({ locale: undefined })}>
           English
         </button>
       </>
@@ -70,7 +66,7 @@ it('No Provider is used', () => {
   expect(renderCountRef.current).toBe(1)
 
   expect(spyWarn).toHaveBeenCalledTimes(1)
-  expect(spyWarn).toHaveBeenCalledWith('useI18N should be wrapped by Provider')
+  expect(spyWarn).toHaveBeenCalledWith('useI18n should be wrapped by Provider')
 })
 
 describe('Full Test', () => {
@@ -80,32 +76,32 @@ describe('Full Test', () => {
     }
 
     function Content() {
-      const { i18n, setI18N, withI18N } = useI18N()
+      const [t, { setI18n, withI18n }] = useI18n()
 
       renderCountRef.current++
 
-      const { i18n: t } = withI18N({ locale: 'en' })
+      const { t: tr } = withI18n({ locale: 'en' })
 
       return (
         <>
-          <div id="text">{i18n('你好世界')}</div>
-          <div id="fixedLocaleText">{t('你好世界')}</div>
-          <button id="zhBtn" onClick={() => setI18N({ locale: 'zh' })}>
+          <div id="text">{t('你好世界')}</div>
+          <div id="fixedLocaleText">{tr('你好世界')}</div>
+          <button id="zhBtn" onClick={() => setI18n({ locale: 'zh' })}>
             简体中文
           </button>
-          <button id="enBtn" onClick={() => setI18N({ locale: 'en' })}>
+          <button id="enBtn" onClick={() => setI18n({ locale: 'en' })}>
             English
           </button>
           <button
             id="unknownBtn"
-            onClick={() => setI18N({ locale: undefined })}
+            onClick={() => setI18n({ locale: undefined })}
           >
             English
           </button>
           <button
             id="jpBtn"
             onClick={() =>
-              setI18N({
+              setI18n({
                 locale: 'jp',
                 langs: {
                   jp: {
@@ -126,7 +122,7 @@ describe('Full Test', () => {
     function App() {
       return (
         <Provider
-          namespace="i18n-pro-test"
+          namespace="t-pro-test"
           langs={{
             en: {
               你好世界: 'Hello World',
@@ -196,7 +192,7 @@ describe('Full Test', () => {
         props
 
       return function Content() {
-        const { i18n, setI18N } = useI18N()
+        const [t, { setI18n }] = useI18n()
 
         function getId(id: string) {
           if (!prefix) return id
@@ -212,29 +208,29 @@ describe('Full Test', () => {
 
         return (
           <>
-            <div id={getId('text')}>{i18n('你好世界')}</div>
+            <div id={getId('text')}>{t('你好世界')}</div>
             <button
               id={getId('zhBtn')}
-              onClick={() => setI18N({ locale: 'zh' })}
+              onClick={() => setI18n({ locale: 'zh' })}
             >
               简体中文
             </button>
             <button
               id={getId('enBtn')}
-              onClick={() => setI18N({ locale: 'en' })}
+              onClick={() => setI18n({ locale: 'en' })}
             >
               English
             </button>
             <button
               id={getId('unknownBtn')}
-              onClick={() => setI18N({ locale: undefined })}
+              onClick={() => setI18n({ locale: undefined })}
             >
               English
             </button>
             <button
               id={getId('jpBtn')}
               onClick={() =>
-                setI18N({
+                setI18n({
                   locale: 'jp',
                   langs: {
                     jp: {

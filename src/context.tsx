@@ -1,22 +1,29 @@
 import { createContext, useContext } from 'react'
-import { I18N, SetI18N, WithI18N } from 'i18n-pro'
+import { Translate, SetI18n, WithI18n } from 'i18n-pro'
 
 let count = 0
 
-const i18n: I18N = (t) => {
+const t: Translate = (t) => {
   if (count === 0) {
-    console.warn('useI18N should be wrapped by Provider')
+    console.warn('useI18n should be wrapped by Provider')
     count++
   }
   return t
 }
-const setI18N: SetI18N = (res) => ({ ...res, namespace: 'unknown' })
-const withI18N: WithI18N = () => ({ i18n })
+const setI18n: SetI18n = (res) => ({ ...res, namespace: 'unknown' })
+const withI18n: WithI18n = () => ({ t })
+const defaultContext = {
+  t,
+  setI18n,
+  withI18n,
+}
 
-const i18nContext = createContext({ i18n, setI18N, withI18N })
+const i18nContext = createContext(defaultContext)
 
 export const InnerProvider = i18nContext.Provider
 
-export function useI18N() {
-  return useContext(i18nContext)
+export function useI18n(): [Translate, Omit<typeof defaultContext, 't'>] {
+  const { t, ...rest } = useContext(i18nContext)
+
+  return [t, rest]
 }
