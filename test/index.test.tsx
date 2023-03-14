@@ -9,7 +9,7 @@ it('No Provider is used', () => {
   }
 
   function Content() {
-    const [t, { setI18n }] = useI18n()
+    const [t, setI18n] = useI18n()
 
     renderCountRef.current++
 
@@ -76,7 +76,7 @@ describe('Full Test', () => {
     }
 
     function Content() {
-      const [t, { setI18n, withI18n }] = useI18n()
+      const [t, setI18n, { withI18n }] = useI18n()
 
       renderCountRef.current++
 
@@ -192,7 +192,7 @@ describe('Full Test', () => {
         props
 
       return function Content() {
-        const [t, { setI18n }] = useI18n()
+        const [t, setI18n] = useI18n()
 
         function getId(id: string) {
           if (!prefix) return id

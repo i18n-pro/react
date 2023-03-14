@@ -22,8 +22,12 @@ const i18nContext = createContext(defaultContext)
 
 export const InnerProvider = i18nContext.Provider
 
-export function useI18n(): [Translate, Omit<typeof defaultContext, 't'>] {
-  const { t, ...rest } = useContext(i18nContext)
+export function useI18n(): [
+  Translate,
+  SetI18n,
+  Omit<typeof defaultContext, 't' | 'setI18n'>,
+] {
+  const { t, setI18n, ...rest } = useContext(i18nContext)
 
-  return [t, rest]
+  return [t, setI18n, rest]
 }
