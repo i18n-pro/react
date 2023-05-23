@@ -10,7 +10,7 @@ export interface ProviderProps extends I18nState {
 export default function Provider(props: ProviderProps) {
   const { children, ...restProps } = props
   const [state, setState] = useState<I18nState>(restProps)
-  const [{ t, setI18n, withI18n }] = useState(() => initI18n(restProps))
+  const [{ t, setI18n }] = useState(() => initI18n(restProps))
 
   const setI18nProxy: SetI18n = useCallback((args) => {
     const newState = setI18n(args)
@@ -23,7 +23,7 @@ export default function Provider(props: ProviderProps) {
     return {
       setI18n: setI18nProxy,
       t,
-      withI18n,
+      i18nState: state,
     }
   }, [state])
 

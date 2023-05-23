@@ -9,7 +9,7 @@ it('No Provider is used', () => {
   }
 
   function Content() {
-    const [t, setI18n] = useI18n()
+    const { t, setI18n } = useI18n()
 
     renderCountRef.current++
 
@@ -76,16 +76,13 @@ describe('Full Test', () => {
     }
 
     function Content() {
-      const [t, setI18n, { withI18n }] = useI18n()
+      const { t, setI18n } = useI18n()
 
       renderCountRef.current++
-
-      const { t: tr } = withI18n({ locale: 'en' })
 
       return (
         <>
           <div id="text">{t('你好世界')}</div>
-          <div id="fixedLocaleText">{tr('你好世界')}</div>
           <button id="zhBtn" onClick={() => setI18n({ locale: 'zh' })}>
             简体中文
           </button>
@@ -138,39 +135,32 @@ describe('Full Test', () => {
     const { container } = render(<App />)
 
     const textWrapper = container.querySelector('#text')
-    const fixedLocaleTextWrapper = container.querySelector('#fixedLocaleText')
     const zhBtn = container.querySelector('#zhBtn') as Element
     const enBtn = container.querySelector('#enBtn') as Element
     const unknownBtn = container.querySelector('#unknownBtn') as Element
     const jpBtn = container.querySelector('#jpBtn') as Element
 
     expect(textWrapper).toHaveTextContent('你好世界')
-    expect(fixedLocaleTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(1)
 
     fireEvent.click(enBtn)
     expect(textWrapper).toHaveTextContent('Hello World')
-    expect(fixedLocaleTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(2)
 
     fireEvent.click(zhBtn)
     expect(textWrapper).toHaveTextContent('你好世界')
-    expect(fixedLocaleTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(3)
 
     fireEvent.click(enBtn)
     expect(textWrapper).toHaveTextContent('Hello World')
-    expect(fixedLocaleTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(4)
 
     fireEvent.click(unknownBtn)
     expect(textWrapper).toHaveTextContent('你好世界')
-    expect(fixedLocaleTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(5)
 
     fireEvent.click(jpBtn)
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
-    expect(fixedLocaleTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(6)
   })
 
@@ -192,7 +182,7 @@ describe('Full Test', () => {
         props
 
       return function Content() {
-        const [t, setI18n] = useI18n()
+        const { t, setI18n } = useI18n()
 
         function getId(id: string) {
           if (!prefix) return id
