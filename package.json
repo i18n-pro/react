@@ -1,14 +1,16 @@
 {
   "name": "@i18n-pro/react",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.0-alpha.1",
+  "description": "Lightweight, simple, flexible, automatic translation internationalization tool for React（适用于 React 的轻量、简单、灵活、自动翻译的国际化工具）",
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
     "lint-code": "npx lint-staged",
     "lint-msg": "npx commitlint --edit",
     "test": "vitest --ui",
-    "coverage": "vitest --coverage"
+    "coverage": "vitest --coverage",
+    "docs": "jtm run",
+    "docs-translate": "i18n t -P docs/src"
   },
   "author": "Eyelly Wu",
   "license": "MIT",
@@ -31,6 +33,7 @@
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
     "jsdom": "^21.1.0",
+    "jsx-to-md": "^0.11.3",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "tslib": "^2.5.0",
@@ -43,11 +46,23 @@
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "i18n-pro": "^1.3.2",
+    "i18n-pro": "2.0.0-alpha.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "lint-staged": {
     "*.{json,ts,tsx,js}": "eslint --fix -f table"
+  },
+  "codeNameMap": {
+    "en": "",
+    "zh": "zh-CN"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i18n-pro/react-i18n-pro.git"
+  },
+  "homepage": "https://github.com/i18n-pro/react-i18n-pro",
+  "bugs": {
+    "url": "https://github.com/i18n-pro/react-i18n-pro/issues"
   }
 }
