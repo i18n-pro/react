@@ -1,0 +1,34 @@
+name: ci
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v2
+
+      - name: 安装 pnpm
+        run: npm i -g pnpm
+        shell: sh
+
+      - name: 安装依赖
+        run: pnpm i
+        shell: sh
+
+      - name: 测试源码并生成覆盖率
+        run: npm run coverage
+        shell: sh
+
+      - name: 上传测试报告
+        run:
+          bash <(curl -s https://codecov.io/bash) -t ${{ secrets.CODECOV_TOKEN }}
+          -Z -F unittests
+        shell: bash
