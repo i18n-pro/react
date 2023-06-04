@@ -1,7 +1,7 @@
 <div align="center">
   <p style="font-size: 18px;">适用于 React 的轻量、简单、灵活、自动翻译的国际化工具</p>
 
-[English](https://github.com/i18n-pro/react-i18n-pro/tree/v0.1.0-alpha.1#readme) | 简体中文
+[English](https://github.com/i18n-pro/react-i18n-pro/tree/v0.1.0-alpha.2#readme) | 简体中文
 
 
 
