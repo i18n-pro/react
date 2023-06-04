@@ -35,7 +35,7 @@ const links = [
   },
   {
     title: 'last-commit',
-    href: `${homepage}/commits/dev`,
+    href: `${homepage}/commits/main`,
   },
   {
     title: 'github-issues',
@@ -43,7 +43,7 @@ const links = [
   },
   {
     title: 'codecov',
-    href: `https://codecov.io/gh/eyelly-wu/react-i18n-pro`,
+    href: `https://codecov.io/gh/${githubKey}`,
   },
   {
     title: 'i18n-pro-bundlesize',
@@ -89,7 +89,7 @@ const images = [
   {
     title: 'last-commit',
     alt: 'last-commit',
-    src: `https://img.shields.io/github/last-commit/${githubKey}/dev`,
+    src: `https://img.shields.io/github/last-commit/${githubKey}/main`,
   },
   {
     title: 'github-issues',
@@ -99,7 +99,7 @@ const images = [
   {
     title: 'codecov',
     alt: 'codecov',
-    src: `https://codecov.io/gh/${githubKey}/branch/main/graph/badge.svg?token=758C46SIE7`,
+    src: `https://codecov.io/gh/${githubKey}/branch/main/graph/badge.svg?token=GQ6S1GPFCM`,
   },
 ] as const
 

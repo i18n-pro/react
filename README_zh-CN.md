@@ -9,9 +9,9 @@
 [![npm-download](https://img.shields.io/npm/dm/@i18n-pro/react "npm-download")](https://www.npmjs.com/package/@i18n-pro/react "npm")
 
 [![github-stars](https://img.shields.io/github/stars/i18n-pro/react-i18n-pro?style=social "github-stars")](https://github.com/i18n-pro/react-i18n-pro/stargazers "github-stars")
-[![last-commit](https://img.shields.io/github/last-commit/i18n-pro/react-i18n-pro/dev "last-commit")](https://github.com/i18n-pro/react-i18n-pro/commits/dev "last-commit")
+[![last-commit](https://img.shields.io/github/last-commit/i18n-pro/react-i18n-pro/main "last-commit")](https://github.com/i18n-pro/react-i18n-pro/commits/main "last-commit")
 [![github-issues](https://img.shields.io/github/issues-raw/i18n-pro/react-i18n-pro "github-issues")](https://github.com/i18n-pro/react-i18n-pro/issues "github-issues")
-[![codecov](https://codecov.io/gh/i18n-pro/react-i18n-pro/branch/main/graph/badge.svg?token=758C46SIE7 "codecov")](https://codecov.io/gh/eyelly-wu/react-i18n-pro "codecov")
+[![codecov](https://codecov.io/gh/i18n-pro/react-i18n-pro/branch/main/graph/badge.svg?token=GQ6S1GPFCM "codecov")](https://codecov.io/gh/i18n-pro/react-i18n-pro "codecov")
 
 </div>
 <details >
@@ -48,10 +48,9 @@
 # 原理
 该库是基于 [i18n-pro](https://github.com/eyelly-wu/i18n-pro "i18n-pro") 结合 `React` 的 `context` 特性来实现的
 
-主要由 3 部分构成
+主要由 `2` 部分构成
 * Provider
 * useI18n
-* i18nContext
 
 
 
@@ -59,21 +58,18 @@
 
 **useI18n**：获取国际化 API 和状态的 hook 方法
 
-**i18nContext**：作为上下传递属性，也是在 `React` 中实现国际化的关键， `useI18n` 也是基于此实现
+
 
 简易示例如下
 ```typescript react
+import React from 'react'
 import { render } from 'react-dom'
 import { Provider, useI18n } from '@i18n-pro/react'
 
-function App(){
+function App() {
   const { t } = useI18n()
 
-  return (
-    <>
-      {t('hello world')}
-    </>
-  )
+  return <>{t('hello world')}</>
 }
 
 render(
@@ -82,13 +78,14 @@ render(
     locale="en"
     langs={{
       zh: {
-        'hello world': '你好世界'
-      }
+        'hello world': '你好世界',
+      },
     }}
   >
     <App />
-  </Provider>
-), document.getElementById('root'))
+  </Provider>,
+  document.getElementById('root'),
+)
 ```
 
 # 帮助文档

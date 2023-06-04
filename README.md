@@ -9,9 +9,9 @@ English | [简体中文](https://github.com/i18n-pro/react-i18n-pro/blob/v0.1.0-
 [![npm-download](https://img.shields.io/npm/dm/@i18n-pro/react "npm-download")](https://www.npmjs.com/package/@i18n-pro/react "npm")
 
 [![github-stars](https://img.shields.io/github/stars/i18n-pro/react-i18n-pro?style=social "github-stars")](https://github.com/i18n-pro/react-i18n-pro/stargazers "github-stars")
-[![last-commit](https://img.shields.io/github/last-commit/i18n-pro/react-i18n-pro/dev "last-commit")](https://github.com/i18n-pro/react-i18n-pro/commits/dev "last-commit")
+[![last-commit](https://img.shields.io/github/last-commit/i18n-pro/react-i18n-pro/main "last-commit")](https://github.com/i18n-pro/react-i18n-pro/commits/main "last-commit")
 [![github-issues](https://img.shields.io/github/issues-raw/i18n-pro/react-i18n-pro "github-issues")](https://github.com/i18n-pro/react-i18n-pro/issues "github-issues")
-[![codecov](https://codecov.io/gh/i18n-pro/react-i18n-pro/branch/main/graph/badge.svg?token=758C46SIE7 "codecov")](https://codecov.io/gh/eyelly-wu/react-i18n-pro "codecov")
+[![codecov](https://codecov.io/gh/i18n-pro/react-i18n-pro/branch/main/graph/badge.svg?token=GQ6S1GPFCM "codecov")](https://codecov.io/gh/i18n-pro/react-i18n-pro "codecov")
 
 </div>
 <details >
@@ -32,7 +32,7 @@ To make internationalization easy and enjoyable 😄💪🏻
 # Features
 
 * **lightweight**：[![bundlesize](https://img.shields.io/bundlephobia/minzip/i18n-pro?color=brightgreen&style=plastic "i18n-pro-bundlesize")](https://bundlephobia.com/package/i18n-pro "i18n-pro-bundlesize") + [![bundlesize](https://img.shields.io/bundlephobia/minzip/@i18n-pro/react?color=brightgreen&style=plastic "bundlesize")](https://bundlephobia.com/package/@i18n-pro/react "bundlesize")
-* The following characteristics are inherited from  [i18n-pro](https://github.com/eyelly-wu/i18n-pro "i18n-pro") 
+* The following features are inherited from  [i18n-pro](https://github.com/eyelly-wu/i18n-pro "i18n-pro") 
    * **simple**
    * **flexible**
    * **automatic-translation**
@@ -48,10 +48,9 @@ To make internationalization easy and enjoyable 😄💪🏻
 # Principle
 This library is implemented based on  [i18n-pro](https://github.com/eyelly-wu/i18n-pro "i18n-pro")  combined with  `React` 's  `context`  feature
 
-Mainly composed of three parts
+Mainly composed of  `2`  parts
 * Provider
 * useI18n
-* i18nContext
 
 
 
@@ -59,21 +58,18 @@ Mainly composed of three parts
 
 **useI18n**：Hook method for obtaining internationalization API and status
 
-**i18nContext**：As a transitive attribute, it is also the key to achieving internationalization in  `React` , and  `useI18n`  is also based on this implementation
+
 
 A simple example is as follows
 ```typescript react
+import React from 'react'
 import { render } from 'react-dom'
 import { Provider, useI18n } from '@i18n-pro/react'
 
-function App(){
+function App() {
   const { t } = useI18n()
 
-  return (
-    <>
-      {t('hello world')}
-    </>
-  )
+  return <>{t('hello world')}</>
 }
 
 render(
@@ -82,13 +78,14 @@ render(
     locale="en"
     langs={{
       zh: {
-        'hello world': '你好世界'
-      }
+        'hello world': '你好世界',
+      },
     }}
   >
     <App />
-  </Provider>
-), document.getElementById('root'))
+  </Provider>,
+  document.getElementById('root'),
+)
 ```
 
 # Help Document

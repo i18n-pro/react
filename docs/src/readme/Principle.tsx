@@ -13,8 +13,8 @@ export default function Principle() {
       )}
       <Break />
       <Break />
-      {t('主要由 3 部分构成')}
-      <List items={['U', 'Provider', 'useI18n', 'i18nContext']} />
+      {t('主要由{0}部分构成', ' `2` ')}
+      <List items={['U', 'Provider', 'useI18n']} />
       <Break />
       <Break />
       <Bold>Provider</Bold>：{t('配置国际化初始化属性的容器组件')}
@@ -23,29 +23,20 @@ export default function Principle() {
       <Bold>useI18n</Bold>：{t('获取国际化 API 和状态的 hook 方法')}
       <Break />
       <Break />
-      <Bold>i18nContext</Bold>：
-      {t(
-        '作为上下传递属性，也是在{0}中实现国际化的关键，{1}也是基于此实现',
-        ' `React` ',
-        ' `useI18n` ',
-      )}
       <Break />
       <Break />
       {t('简易示例如下')}
       <CodeBlock
         langType="typescript react"
         code={`
+import React from 'react'
 import { render } from 'react-dom'
 import { Provider, useI18n } from '@i18n-pro/react'
 
-function App(){
+function App() {
   const { t } = useI18n()
 
-  return (
-    <>
-      {t('hello world')}
-    </>
-  )
+  return <>{t('hello world')}</>
 }
 
 render(
@@ -54,13 +45,14 @@ render(
     locale="en"
     langs={{
       zh: {
-        'hello world': '你好世界'
-      }
+        'hello world': '你好世界',
+      },
     }}
   >
     <App />
-  </Provider>
-), document.getElementById('root'))
+  </Provider>,
+  document.getElementById('root'),
+)
 `}
       />
     </>
