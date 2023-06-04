@@ -11,12 +11,11 @@
     "resolveJsonModule": true,
     "declaration": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx"
+    "jsx": "react"
   },
   "include": [
     "src/",
     "node_modules/vitest/global.d.ts",
-    "docs/src/",
-    "global.d.ts"
+    "mode_modules/@types/react"
   ]
 }

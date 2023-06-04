@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useMemo, useState } from 'react'
+import React, { ReactNode, useCallback, useMemo, useState } from 'react'
 import { initI18n } from 'i18n-pro'
 import type { I18nState, SetI18n } from 'i18n-pro'
 import { InnerProvider } from './context'

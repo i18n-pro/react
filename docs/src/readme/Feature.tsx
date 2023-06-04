@@ -1,10 +1,6 @@
 import { H1, Link, Image, Bold, List, render } from 'jsx-to-md'
 import { linkObj, imageObj } from '../constants'
-import {
-  getI18nPro,
-  getTranslationText,
-  getVariableInterpolation,
-} from '../utils'
+import { getI18nPro } from '../utils'
 
 export default function Vision() {
   return (

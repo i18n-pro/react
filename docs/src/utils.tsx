@@ -1,12 +1,16 @@
 import { getAnchor, Link, render } from 'jsx-to-md'
-import { initI18n as originInitI18n } from 'i18n-pro'
+import { initI18n as originInitI18n, Translate } from 'i18n-pro'
 import { readFileSync } from 'fs'
 import en from './i18n/en.json'
 import packageInfo from '../../package.json'
 
 const { t, setI18n } = originInitI18n({ namespace: 'default' })
 
-global.t = t
+declare global {
+  const t: Translate
+}
+
+;(global as any).t = t
 
 export function initI18n({ locale }) {
   setI18n({

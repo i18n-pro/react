@@ -2,7 +2,12 @@
   "name": "@i18n-pro/react",
   "version": "0.1.0-alpha.1",
   "description": "Lightweight, simple, flexible, automatic translation internationalization tool for React（适用于 React 的轻量、简单、灵活、自动翻译的国际化工具）",
-  "main": "index.js",
+  "module": "dist/src/index.min.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist/src",
+    "./index.js"
+  ],
   "scripts": {
     "prepare": "husky install",
     "lint-code": "npx lint-staged",
@@ -10,7 +15,9 @@
     "test": "vitest --ui",
     "coverage": "vitest --coverage",
     "docs": "jtm run",
-    "docs-translate": "i18n t -P docs/src"
+    "docs-translate": "i18n t -P docs/src",
+    "build": "rimraf dist/src && rollup -c",
+    "publish": "npm run build && npm publish --access=public --registry https://registry.npmjs.org"
   },
   "author": "Eyelly Wu",
   "license": "MIT",
@@ -19,7 +26,7 @@
     "@commitlint/config-conventional": "^17.4.3",
     "@eyelly/prettier-config": "^1.0.0",
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/react": "^12.1.5",
     "@types/react": "^18.0.28",
     "@types/testing-library__jest-dom": "^5.14.5",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
@@ -36,19 +43,24 @@
     "jsx-to-md": "^0.11.3",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
+    "rimraf": "^5.0.1",
+    "rollup": "^2.79.1",
+    "rollup-plugin-prettier": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
     "tslib": "^2.5.0",
     "typescript": "4.8.4",
     "vitest": "^0.28.5"
   },
   "peerDependencies": {
-    "i18n-pro": ">=1.3.2",
+    "i18n-pro": ">=2.0.0",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "i18n-pro": "2.0.0-alpha.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "i18n-pro": "2.0.0-alpha.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "lint-staged": {
     "*.{json,ts,tsx,js}": "eslint --fix -f table"
