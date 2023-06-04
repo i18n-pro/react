@@ -16,7 +16,7 @@
   "快速上手": "Quick Start",
   "API": "API",
   "翻译日志": "Translation log",
-  "如下特性继承于{0}": "The following features are inherited from {0}",
+  "以下特性继承于{0}": "The following features are inherited from {0}",
   "待更新": "To be updated",
   "该库是基于{0}结合{1}的{2}特性来实现的": "This library is implemented based on {0} combined with {1}'s {2} feature",
   "配置国际化初始化属性的容器组件": "Configure container components for internationalization initialization properties",

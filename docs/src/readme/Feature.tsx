@@ -20,7 +20,7 @@ export default function Vision() {
             </Link>
           </>,
           [
-            t('如下特性继承于{0}', getI18nPro('link')),
+            t('以下特性继承于{0}', getI18nPro('link')),
             [
               'U',
               render(<Bold>{t('简单')}</Bold>),

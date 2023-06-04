@@ -1,17 +1,17 @@
 <div align="center">
   <p style="font-size: 18px;">Lightweight, simple, flexible, automatic translation internationalization tool for React</p>
 
-English | [简体中文](https://github.com/i18n-pro/react-i18n-pro/blob/v0.1.0-alpha.2/README_zh-CN.md)
+English | [简体中文](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.3/README_zh-CN.md)
 
 
 
 [![npm-version](https://img.shields.io/npm/v/@i18n-pro/react.svg?style=flat-square "npm-version")](https://www.npmjs.com/package/@i18n-pro/react "npm")
 [![npm-download](https://img.shields.io/npm/dm/@i18n-pro/react "npm-download")](https://www.npmjs.com/package/@i18n-pro/react "npm")
 
-[![github-stars](https://img.shields.io/github/stars/i18n-pro/react-i18n-pro?style=social "github-stars")](https://github.com/i18n-pro/react-i18n-pro/stargazers "github-stars")
-[![last-commit](https://img.shields.io/github/last-commit/i18n-pro/react-i18n-pro/main "last-commit")](https://github.com/i18n-pro/react-i18n-pro/commits/main "last-commit")
-[![github-issues](https://img.shields.io/github/issues-raw/i18n-pro/react-i18n-pro "github-issues")](https://github.com/i18n-pro/react-i18n-pro/issues "github-issues")
-[![codecov](https://codecov.io/gh/i18n-pro/react-i18n-pro/branch/main/graph/badge.svg?token=GQ6S1GPFCM "codecov")](https://codecov.io/gh/i18n-pro/react-i18n-pro "codecov")
+[![github-stars](https://img.shields.io/github/stars/i18n-pro/react?style=social "github-stars")](https://github.com/i18n-pro/react/stargazers "github-stars")
+[![last-commit](https://img.shields.io/github/last-commit/i18n-pro/react/main "last-commit")](https://github.com/i18n-pro/react/commits/main "last-commit")
+[![github-issues](https://img.shields.io/github/issues-raw/i18n-pro/react "github-issues")](https://github.com/i18n-pro/react/issues "github-issues")
+[![codecov](https://codecov.io/gh/i18n-pro/react/branch/main/graph/badge.svg?token=GQ6S1GPFCM "codecov")](https://codecov.io/gh/i18n-pro/react "codecov")
 
 </div>
 <details >
@@ -41,8 +41,8 @@ To make internationalization easy and enjoyable 😄💪🏻
 
 # Live Demo
 
-* [Open in CodeSandbox](https://codesandbox.io/p/github/i18n-pro/react-i18n-pro-demo/main?file=README.md)
-* [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg "Open in StackBlitz")](https://stackblitz.com/edit/react-i18n-pro-demo?file=README.md)
+* [Open in CodeSandbox](https://codesandbox.io/p/github/i18n-pro/react-demo/main?file=README.md)
+* [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg "Open in StackBlitz")](https://stackblitz.com/github/i18n-pro/react-demo?file=README.md)
 
 
 # Principle

@@ -23,7 +23,7 @@ export default function LiveDemo() {
         </ListItem>
         <ListItem>
           <Link
-            href={`https://stackblitz.com/edit/react-i18n-pro-demo?file=${filename}`}
+            href={`https://stackblitz.com/github/i18n-pro/react-demo?file=${filename}`}
           >
             <Image
               alt="Open in StackBlitz"

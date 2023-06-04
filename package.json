@@ -1,6 +1,6 @@
 {
   "name": "@i18n-pro/react",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "description": "Lightweight, simple, flexible, automatic translation internationalization tool for React（适用于 React 的轻量、简单、灵活、自动翻译的国际化工具）",
   "module": "dist/src/index.min.js",
   "types": "./dist/src/index.d.ts",
@@ -69,12 +69,8 @@
     "en": "",
     "zh": "zh-CN"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/i18n-pro/react-i18n-pro.git"
-  },
-  "homepage": "https://github.com/i18n-pro/react-i18n-pro",
+  "homepage": "https://github.com/i18n-pro/react",
   "bugs": {
-    "url": "https://github.com/i18n-pro/react-i18n-pro/issues"
+    "url": "https://github.com/i18n-pro/react/issues"
   }
 }
