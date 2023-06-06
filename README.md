@@ -1,7 +1,7 @@
 <div align="center">
   <p style="font-size: 18px;">Lightweight, simple, flexible, automatic translation internationalization tool for React</p>
 
-English | [简体中文](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.3/README_zh-CN.md)
+English | [简体中文](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/README_zh-CN.md)
 
 
 

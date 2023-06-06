@@ -1,7 +1,25 @@
 {
   "name": "@i18n-pro/react",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0-alpha.4",
   "description": "Lightweight, simple, flexible, automatic translation internationalization tool for React（适用于 React 的轻量、简单、灵活、自动翻译的国际化工具）",
+  "keywords": [
+    "react",
+    "i18n",
+    "react-i18n",
+    "react-intl",
+    "intl",
+    "i18n",
+    "internationalization",
+    "locale",
+    "l10n",
+    "localization",
+    "translate",
+    "translation",
+    "国际化",
+    "多语言",
+    "自动翻译",
+    "automatic translation"
+  ],
   "module": "dist/src/index.min.js",
   "types": "./dist/src/index.d.ts",
   "files": [
@@ -58,7 +76,7 @@
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "i18n-pro": "2.0.0-alpha.5",
+    "i18n-pro": "2.0.0-alpha.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
