@@ -1,9 +1,9 @@
 import React, { memo } from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import { Provider, useI18n } from '../src'
+import { I18nProvider, useI18n } from '../src'
 
-it('No Provider is used', () => {
+it('No I18nProvider is used', () => {
   const renderCountRef = {
     current: 0,
   }
@@ -118,7 +118,7 @@ describe('Full Test', () => {
 
     function App() {
       return (
-        <Provider
+        <I18nProvider
           namespace="t-pro-test"
           langs={{
             en: {
@@ -128,7 +128,7 @@ describe('Full Test', () => {
         >
           <div>a</div>
           <MemoContent />
-        </Provider>
+        </I18nProvider>
       )
     }
 
@@ -242,7 +242,7 @@ describe('Full Test', () => {
 
     function NestedApp() {
       return (
-        <Provider
+        <I18nProvider
           namespace="full-test-nested"
           langs={{
             en: {
@@ -252,7 +252,7 @@ describe('Full Test', () => {
         >
           <div>a</div>
           <ChildMemoContent />
-        </Provider>
+        </I18nProvider>
       )
     }
 
@@ -260,7 +260,7 @@ describe('Full Test', () => {
 
     function App() {
       return (
-        <Provider
+        <I18nProvider
           namespace="full-test-out"
           langs={{
             en: {
@@ -270,7 +270,7 @@ describe('Full Test', () => {
         >
           <div>a</div>
           <MemoContent />
-        </Provider>
+        </I18nProvider>
       )
     }
 

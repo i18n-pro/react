@@ -49,12 +49,12 @@ To make internationalization easy and enjoyable 😄💪🏻
 This library is implemented based on  [i18n-pro](https://github.com/eyelly-wu/i18n-pro "i18n-pro")  combined with  `React` 's  `context`  feature
 
 Mainly composed of  `2`  parts
-* Provider
+* I18nProvider
 * useI18n
 
 
 
-**Provider**：Configure container components for internationalization initialization properties
+**I18nProvider**：Configure container components for internationalization initialization properties
 
 **useI18n**：Hook method for obtaining internationalization API and status
 
@@ -64,7 +64,7 @@ A simple example is as follows
 ```typescript react
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider, useI18n } from '@i18n-pro/react'
+import { I18nProvider, useI18n } from '@i18n-pro/react'
 
 function App() {
   const { t } = useI18n()
@@ -73,7 +73,7 @@ function App() {
 }
 
 render(
-  <Provider
+  <I18nProvider
     namespace="i18n-example"
     locale="en"
     langs={{
@@ -83,7 +83,7 @@ render(
     }}
   >
     <App />
-  </Provider>,
+  </I18nProvider>,
   document.getElementById('root'),
 )
 ```

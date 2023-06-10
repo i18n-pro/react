@@ -49,12 +49,12 @@
 该库是基于 [i18n-pro](https://github.com/eyelly-wu/i18n-pro "i18n-pro") 结合 `React` 的 `context` 特性来实现的
 
 主要由 `2` 部分构成
-* Provider
+* I18nProvider
 * useI18n
 
 
 
-**Provider**：配置国际化初始化属性的容器组件
+**I18nProvider**：配置国际化初始化属性的容器组件
 
 **useI18n**：获取国际化 API 和状态的 hook 方法
 
@@ -64,7 +64,7 @@
 ```typescript react
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider, useI18n } from '@i18n-pro/react'
+import { I18nProvider, useI18n } from '@i18n-pro/react'
 
 function App() {
   const { t } = useI18n()
@@ -73,7 +73,7 @@ function App() {
 }
 
 render(
-  <Provider
+  <I18nProvider
     namespace="i18n-example"
     locale="en"
     langs={{
@@ -83,7 +83,7 @@ render(
     }}
   >
     <App />
-  </Provider>,
+  </I18nProvider>,
   document.getElementById('root'),
 )
 ```

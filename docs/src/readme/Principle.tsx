@@ -14,10 +14,10 @@ export default function Principle() {
       <Break />
       <Break />
       {t('主要由{0}部分构成', ' `2` ')}
-      <List items={['U', 'Provider', 'useI18n']} />
+      <List items={['U', 'I18nProvider', 'useI18n']} />
       <Break />
       <Break />
-      <Bold>Provider</Bold>：{t('配置国际化初始化属性的容器组件')}
+      <Bold>I18nProvider</Bold>：{t('配置国际化初始化属性的容器组件')}
       <Break />
       <Break />
       <Bold>useI18n</Bold>：{t('获取国际化 API 和状态的 hook 方法')}
@@ -31,7 +31,7 @@ export default function Principle() {
         code={`
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider, useI18n } from '@i18n-pro/react'
+import { I18nProvider, useI18n } from '@i18n-pro/react'
 
 function App() {
   const { t } = useI18n()
@@ -40,7 +40,7 @@ function App() {
 }
 
 render(
-  <Provider
+  <I18nProvider
     namespace="i18n-example"
     locale="en"
     langs={{
@@ -50,7 +50,7 @@ render(
     }}
   >
     <App />
-  </Provider>,
+  </I18nProvider>,
   document.getElementById('root'),
 )
 `}
