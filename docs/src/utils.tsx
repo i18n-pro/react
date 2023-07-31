@@ -2,7 +2,9 @@ import { getAnchor, Link, render } from 'jsx-to-md'
 import { initI18n as originInitI18n, Translate } from 'i18n-pro'
 import { readFileSync } from 'fs'
 import en from './i18n/en.json'
-import packageInfo from '../../package.json'
+import packageInfo, { name } from '../../package.json'
+import fetch from './fetch'
+import { Package } from './types'
 
 const { t, setI18n } = originInitI18n({ namespace: 'default' })
 
@@ -23,8 +25,11 @@ export function initI18n({ locale }) {
   global.docLocale = locale
 }
 
-export function getDocHref(filename: string, anchorProp?: string) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function getDocHrefImpl(
+  packageInfo: Package,
+  filename: string,
+  anchorProp?: string,
+) {
   const { version, codeNameMap, homepage } = packageInfo
   const locale = global.docLocale
   let name = codeNameMap[locale]
@@ -38,6 +43,18 @@ export function getDocHref(filename: string, anchorProp?: string) {
   } else {
     return `${homepage}/blob/v${version}/docs/dist/${filename}${name}.md${anchor}`
   }
+}
+
+export function getDocHref(filename: string, anchorProp?: string) {
+  return getDocHrefImpl(packageInfo, filename, anchorProp)
+}
+
+export function getI18nProDocHref(
+  i18nProPkg: Package,
+  filename: string,
+  anchorProp?: string,
+) {
+  return getDocHrefImpl(i18nProPkg, filename, anchorProp)
 }
 
 export function getFileContent(filepath: string) {
@@ -81,18 +98,88 @@ export function getTranslationText(normal = false) {
   return getText(text, normal)
 }
 
-export function getI18nPro(type: 'text' | 'tag' | 'link') {
-  const text = 'i18n-pro'
-
+export function getI18nPro(type: 'text' | 'tag' | 'link', version?: string) {
+  const text = `i18n-pro${version ? `@${version}` : ''}`
   if (type === 'text') return text
+  let url = 'https://github.com/i18n-pro/core'
+
+  if (version) {
+    url += `/tree/v${version}`
+  }
+
   const typeMap = {
     tag: ` \`${text}\` `,
     link: ` ${render(
-      <Link title={text} href="https://github.com/eyelly-wu/i18n-pro">
+      <Link title={text} href={url}>
         {text}
       </Link>,
     )} `,
   }
 
   return typeMap[type]
+}
+
+export function getPackageName() {
+  return name.slice(1)
+}
+
+export const packageName = getPackageName()
+
+function requestCache<T>(key: string, request: () => Promise<T>): Promise<T> {
+  if (!requestCache[key]) {
+    requestCache[key] = request()
+  }
+
+  return requestCache[key]
+}
+
+export async function getI18nProFileImpl(path?: string): Promise<string> {
+  const base = 'https://jsd.cdn.zzko.cn/gh/i18n-pro/core@main'
+  // const base = 'https://raw.githubusercontent.com/i18n-pro/core/main'
+
+  let res = t(`获取文件${path}错误`)
+  try {
+    console.log('request', path)
+    res = (await fetch(`${base}${path}`, {
+      headers: {
+        Accept: 'text/plain; charset=utf-8',
+      },
+      data: '',
+    })) as string
+    console.log({ res })
+  } catch (error) {
+    res += '\n' + error
+    console.error(error)
+  }
+
+  return res
+}
+
+export async function getI18nProPackage() {
+  const filepath = '/package.json'
+  const content = await requestCache(filepath, () =>
+    getI18nProFileImpl(filepath),
+  )
+  let packageInfo = {
+    name: 'error',
+    version: 'error',
+    homepage: 'error',
+    codeNameMap: {} as any,
+  }
+  try {
+    packageInfo = JSON.parse(content)
+  } catch (error) {
+    console.log(error)
+  }
+  return packageInfo
+}
+
+export async function getI18nProFile(
+  filepath: string,
+): Promise<{ content: string }> {
+  const content = await requestCache(filepath, () =>
+    getI18nProFileImpl(filepath),
+  )
+
+  return { content }
 }

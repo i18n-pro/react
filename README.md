@@ -32,7 +32,7 @@ To make internationalization easy and enjoyable 😄💪🏻
 # Features
 
 * **lightweight**：[![bundlesize](https://img.shields.io/bundlephobia/minzip/i18n-pro?color=brightgreen&style=plastic "i18n-pro-bundlesize")](https://bundlephobia.com/package/i18n-pro "i18n-pro-bundlesize") + [![bundlesize](https://img.shields.io/bundlephobia/minzip/@i18n-pro/react?color=brightgreen&style=plastic "bundlesize")](https://bundlephobia.com/package/@i18n-pro/react "bundlesize")
-* The following features are inherited from  [i18n-pro](https://github.com/eyelly-wu/i18n-pro "i18n-pro") 
+* The following features are inherited from  [i18n-pro](https://github.com/i18n-pro/core "i18n-pro") 
    * **simple**
    * **flexible**
    * **automatic-translation**
@@ -46,7 +46,7 @@ To make internationalization easy and enjoyable 😄💪🏻
 
 
 # Principle
-This library is implemented based on  [i18n-pro](https://github.com/eyelly-wu/i18n-pro "i18n-pro")  combined with  `React` 's  `context`  feature
+This library is implemented based on  [i18n-pro](https://github.com/i18n-pro/core "i18n-pro")  combined with  `React` 's  `context`  feature
 
 Mainly composed of  `2`  parts
 * I18nProvider

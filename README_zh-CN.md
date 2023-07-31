@@ -32,7 +32,7 @@
 # 特性
 
 * **轻量**：[![bundlesize](https://img.shields.io/bundlephobia/minzip/i18n-pro?color=brightgreen&style=plastic "i18n-pro-bundlesize")](https://bundlephobia.com/package/i18n-pro "i18n-pro-bundlesize") + [![bundlesize](https://img.shields.io/bundlephobia/minzip/@i18n-pro/react?color=brightgreen&style=plastic "bundlesize")](https://bundlephobia.com/package/@i18n-pro/react "bundlesize")
-* 以下特性继承于 [i18n-pro](https://github.com/eyelly-wu/i18n-pro "i18n-pro") 
+* 以下特性继承于 [i18n-pro](https://github.com/i18n-pro/core "i18n-pro") 
    * **简单**
    * **灵活**
    * **自动翻译**
@@ -46,7 +46,7 @@
 
 
 # 原理
-该库是基于 [i18n-pro](https://github.com/eyelly-wu/i18n-pro "i18n-pro") 结合 `React` 的 `context` 特性来实现的
+该库是基于 [i18n-pro](https://github.com/i18n-pro/core "i18n-pro") 结合 `React` 的 `context` 特性来实现的
 
 主要由 `2` 部分构成
 * I18nProvider

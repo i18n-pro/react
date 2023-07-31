@@ -78,7 +78,7 @@ function getSource({ entry, out, name }) {
 module.exports = {
   source: [
     ...getSource(readme),
-    // ...getSource(usage),
+    ...getSource(usage),
     // ...getSource(commandline),
     // ...getSource(api),
     // ...getSource(matchRule),
