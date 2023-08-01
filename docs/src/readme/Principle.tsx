@@ -47,6 +47,9 @@ render(
       zh: {
         'hello world': '你好世界',
       },
+      ja:{
+        "hello world": "こんにちは世界",
+      },
     }}
   >
     <App />

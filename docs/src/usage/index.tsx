@@ -21,6 +21,7 @@ import {
   getI18nProFile,
   getI18nProDocHref,
 } from '../utils'
+import SpecialStatement from '../components/SpecialStatement'
 
 type I18nProProps = {
   i18nProPkg: Package
@@ -57,7 +58,15 @@ export default {
 } as I18nState
 `}
       />
-      <H3>{t('接入 I18nProvider 和 useI18n')}</H3>
+      <H3>
+        {t(
+          '接入{0}和{1}，并用{2}包裹{3}',
+          ' `I18nProvider` ',
+          ' `useI18n` ',
+          ' `t` ',
+          getTranslationText(),
+        )}
+      </H3>
       <CodeBlock
         code={`
 // App.tsx
@@ -93,7 +102,7 @@ function InitConfig(props: I18nProProps) {
       <Break />
       <H2>{`3. ${t('初始化命令行配置文件')}`}</H2>
       {t('在命令行终端输入如下命令，')}
-      <Link href={getDocHref('COMMAND_LINE', t('命令列表'))}>
+      <Link href={getI18nProDocHref(i18nProPkg, 'COMMAND_LINE', t('命令列表'))}>
         {t('更多命令')}
       </Link>
       <CodeBlock langType="bash" code={`npx i18n init `} />
@@ -349,6 +358,7 @@ export default function Usage(props) {
         {(i18nProPkg) => (
           <>
             <H1 skip>{t('快速上手')}</H1>
+            <SpecialStatement i18nProPkg={i18nProPkg} />
             <TableOfContents text={t('目录')} open={false} />
             <Install />
             <LinkApi />

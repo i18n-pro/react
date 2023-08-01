@@ -146,7 +146,7 @@ export async function getI18nProFileImpl(path?: string): Promise<string> {
       },
       data: '',
     })) as string
-    console.log({ res })
+    // console.log({ res })
   } catch (error) {
     res += '\n' + error
     console.error(error)

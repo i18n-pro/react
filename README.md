@@ -21,7 +21,6 @@ English | [简体中文](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/R
   [Features](#features)<br/>
   [Live Demo](#live-demo)<br/>
   [Principle](#principle)<br/>
-  [Help Document](#help-document)<br/>
   [License](#license)<br/>
 
 </details>
@@ -80,6 +79,9 @@ render(
       zh: {
         'hello world': '你好世界',
       },
+      ja:{
+        "hello world": "こんにちは世界",
+      },
     }}
   >
     <App />
@@ -90,7 +92,16 @@ render(
 
 # Help Document
 
-* To be updated
+>当前文档中 `i18n-pro` 相关链接是基于 `2.0.0` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致
+* 当前库
+   * [Quick Start](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/USAGE.md)
+   * [API](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/API.md)
+   * [Changelog](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/CHANGELOG.md)
+* i18n-pro
+   * [Command Line](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/COMMAND_LINE.md)
+   * [Matching Rules](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/MATCH_RULE.md)
+   * [Q&A](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/Q&A.md)
+   * [Translation log](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/OUTPUT_LOG.md)
 
 
 # License

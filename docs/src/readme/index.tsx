@@ -7,7 +7,6 @@ import LiveDemo from './LiveDemo'
 import Principle from './Principle'
 import HelpDoc from './HelpDoc'
 import License from './License'
-import React from 'react'
 
 export default function Doc(props) {
   initI18n(props)
