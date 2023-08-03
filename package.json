@@ -1,6 +1,6 @@
 {
   "name": "@i18n-pro/react",
-  "version": "0.1.0-alpha.4",
+  "version": "doc",
   "description": "Lightweight, simple, flexible, automatic translation internationalization tool for React（适用于 React 的轻量、简单、灵活、自动翻译的国际化工具）",
   "keywords": [
     "react",
@@ -73,7 +73,8 @@
   "peerDependencies": {
     "i18n-pro": ">=2.0.0",
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react-dom": ">=16.8.0",
+    "react-native": ">=0.59.0"
   },
   "dependencies": {
     "i18n-pro": "2.0.0-alpha.8",

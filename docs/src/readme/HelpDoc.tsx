@@ -32,8 +32,10 @@ export default function DocLink() {
                   <Link href={getI18nProDocHref(i18nProPkg, 'MATCH_RULE')}>
                     {t('匹配规则')}
                   </Link>,
-                  <Link href={getDocHref('Q&A')}>Q&A</Link>,
-                  <Link href={getDocHref('OUTPUT_LOG')}>{t('翻译日志')}</Link>,
+                  <Link href={getI18nProDocHref(i18nProPkg, 'Q&A')}>Q&A</Link>,
+                  <Link href={getI18nProDocHref(i18nProPkg, 'OUTPUT_LOG')}>
+                    {t('翻译日志')}
+                  </Link>,
                 ],
               ],
             ]}

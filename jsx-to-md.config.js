@@ -16,40 +16,10 @@ const usage = {
   name: 'USAGE',
 }
 
-const commandline = {
-  entry: 'docs/src/commandline',
-  out: 'docs/dist/',
-  name: 'COMMAND_LINE',
-}
-
 const api = {
   entry: 'docs/src/api',
   out: 'docs/dist/',
   name: 'API',
-}
-
-const matchRule = {
-  entry: 'docs/src/matchrule',
-  out: 'docs/dist/',
-  name: 'MATCH_RULE',
-}
-
-const outputLog = {
-  entry: 'docs/src/outputLog',
-  out: 'docs/dist/',
-  name: 'OUTPUT_LOG',
-}
-
-const qAndA = {
-  entry: 'docs/src/q&a',
-  out: 'docs/dist/',
-  name: 'Q&A',
-}
-
-const changeLog = {
-  entry: 'docs/src/changelog',
-  out: 'docs/dist/',
-  name: 'CHANGELOG',
 }
 
 function getSource({ entry, out, name }) {
@@ -76,14 +46,5 @@ function getSource({ entry, out, name }) {
 }
 
 module.exports = {
-  source: [
-    ...getSource(readme),
-    ...getSource(usage),
-    // ...getSource(commandline),
-    // ...getSource(api),
-    // ...getSource(matchRule),
-    // ...getSource(outputLog),
-    // ...getSource(qAndA),
-    // ...getSource(changeLog),
-  ],
+  source: [...getSource(readme), ...getSource(usage), ...getSource(api)],
 }

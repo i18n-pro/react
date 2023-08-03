@@ -183,3 +183,13 @@ export async function getI18nProFile(
 
   return { content }
 }
+
+export function getVariableInterpolation(normal = false) {
+  const text = t('变量插值')
+  return getText(text, normal)
+}
+
+export function getInterpolationVariable(normal = false) {
+  const text = t('插值变量')
+  return getText(text, normal)
+}

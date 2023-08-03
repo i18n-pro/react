@@ -1,7 +1,7 @@
 <div align="center">
   <p style="font-size: 18px;">适用于 React 的轻量、简单、灵活、自动翻译的国际化工具</p>
 
-[English](https://github.com/i18n-pro/react/tree/v0.1.0-alpha.4#readme) | 简体中文
+[English](https://github.com/i18n-pro/react/tree/vdoc#readme) | 简体中文
 
 
 
@@ -92,16 +92,16 @@ render(
 
 # 帮助文档
 
->当前文档中 `i18n-pro` 相关链接是基于 `2.0.0` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致
+>为了避免不必要的重复文档内容，该库的部分文档是链接 `i18n-pro` 中的内容<br />当前文档中 `i18n-pro` 相关链接是基于 `2.0.0` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致
 * 当前库
-   * [快速上手](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/USAGE_zh-CN.md)
-   * [API](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/API_zh-CN.md)
-   * [更新日志](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/CHANGELOG_zh-CN.md)
+   * [快速上手](https://github.com/i18n-pro/react/blob/vdoc/docs/dist/USAGE_zh-CN.md)
+   * [API](https://github.com/i18n-pro/react/blob/vdoc/docs/dist/API_zh-CN.md)
+   * [更新日志](https://github.com/i18n-pro/react/blob/vdoc/docs/dist/CHANGELOG_zh-CN.md)
 * i18n-pro
    * [命令行](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/COMMAND_LINE_zh-CN.md)
    * [匹配规则](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/MATCH_RULE_zh-CN.md)
-   * [Q&A](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/Q&A_zh-CN.md)
-   * [翻译日志](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/OUTPUT_LOG_zh-CN.md)
+   * [Q&A](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/Q&A_zh-CN.md)
+   * [翻译日志](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/OUTPUT_LOG_zh-CN.md)
 
 
 # License

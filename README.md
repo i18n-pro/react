@@ -1,7 +1,7 @@
 <div align="center">
   <p style="font-size: 18px;">Lightweight, simple, flexible, automatic translation internationalization tool for React</p>
 
-English | [简体中文](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/README_zh-CN.md)
+English | [简体中文](https://github.com/i18n-pro/react/blob/vdoc/README_zh-CN.md)
 
 
 
@@ -92,16 +92,16 @@ render(
 
 # Help Document
 
->当前文档中 `i18n-pro` 相关链接是基于 `2.0.0` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致
+>为了避免不必要的重复文档内容，该库的部分文档是链接 `i18n-pro` 中的内容<br />当前文档中 `i18n-pro` 相关链接是基于 `2.0.0` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致
 * 当前库
-   * [Quick Start](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/USAGE.md)
-   * [API](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/API.md)
-   * [Changelog](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/CHANGELOG.md)
+   * [Quick Start](https://github.com/i18n-pro/react/blob/vdoc/docs/dist/USAGE.md)
+   * [API](https://github.com/i18n-pro/react/blob/vdoc/docs/dist/API.md)
+   * [Changelog](https://github.com/i18n-pro/react/blob/vdoc/docs/dist/CHANGELOG.md)
 * i18n-pro
    * [Command Line](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/COMMAND_LINE.md)
    * [Matching Rules](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/MATCH_RULE.md)
-   * [Q&A](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/Q&A.md)
-   * [Translation log](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.4/docs/dist/OUTPUT_LOG.md)
+   * [Q&A](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/Q&A.md)
+   * [Translation log](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/OUTPUT_LOG.md)
 
 
 # License
