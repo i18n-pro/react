@@ -1,4 +1,4 @@
-import { H1, UnorderedList, ListItem, Link, Image } from 'jsx-to-md'
+import { H1, Link, Image, List } from 'jsx-to-md'
 import { githubKey } from '../constants'
 
 export default function LiveDemo() {
@@ -13,15 +13,14 @@ export default function LiveDemo() {
   return (
     <>
       <H1>Live Demo</H1>
-      <UnorderedList>
-        <ListItem>
+      <List
+        items={[
+          'U',
           <Link
             href={`https://codesandbox.io/p/github/${githubKey}-demo/main?file=${filename}`}
           >
             Open in CodeSandbox
-          </Link>
-        </ListItem>
-        <ListItem>
+          </Link>,
           <Link
             href={`https://stackblitz.com/github/i18n-pro/react-demo?file=${filename}`}
           >
@@ -30,9 +29,9 @@ export default function LiveDemo() {
               title="Open in StackBlitz"
               src="https://developer.stackblitz.com/img/open_in_stackblitz_small.svg"
             />
-          </Link>
-        </ListItem>
-      </UnorderedList>
+          </Link>,
+        ]}
+      />
     </>
   )
 }

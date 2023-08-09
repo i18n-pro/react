@@ -18,6 +18,7 @@ English | [简体中文](https://github.com/i18n-pro/react/blob/vdoc/README_zh-C
   <summary>Table of Contents</summary>
 
   [Vision](#vision)<br/>
+  [要求](#要求)<br/>
   [Features](#features)<br/>
   [Live Demo](#live-demo)<br/>
   [Principle](#principle)<br/>
@@ -28,6 +29,14 @@ English | [简体中文](https://github.com/i18n-pro/react/blob/vdoc/README_zh-C
 
 # Vision
 To make internationalization easy and enjoyable 😄💪🏻
+# 要求
+
+* react >= **16.8.0**
+* react-dom >= **16.8.0**
+* react-native >= **0.59.0**
+* i18n-pro >= **2.0.0**
+
+
 # Features
 
 * **lightweight**：[![bundlesize](https://img.shields.io/bundlephobia/minzip/i18n-pro?color=brightgreen&style=plastic "i18n-pro-bundlesize")](https://bundlephobia.com/package/i18n-pro "i18n-pro-bundlesize") + [![bundlesize](https://img.shields.io/bundlephobia/minzip/@i18n-pro/react?color=brightgreen&style=plastic "bundlesize")](https://bundlephobia.com/package/@i18n-pro/react "bundlesize")

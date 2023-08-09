@@ -18,6 +18,7 @@
   <summary>目录</summary>
 
   [愿景](#愿景)<br/>
+  [要求](#要求)<br/>
   [特性](#特性)<br/>
   [Live Demo](#live-demo)<br/>
   [原理](#原理)<br/>
@@ -28,6 +29,14 @@
 
 # 愿景
 为了让接入国际化成为轻松且愉快的事😄💪🏻
+# 要求
+
+* react >= **16.8.0**
+* react-dom >= **16.8.0**
+* react-native >= **0.59.0**
+* i18n-pro >= **2.0.0**
+
+
 # 特性
 
 * **轻量**：[![bundlesize](https://img.shields.io/bundlephobia/minzip/i18n-pro?color=brightgreen&style=plastic "i18n-pro-bundlesize")](https://bundlephobia.com/package/i18n-pro "i18n-pro-bundlesize") + [![bundlesize](https://img.shields.io/bundlephobia/minzip/@i18n-pro/react?color=brightgreen&style=plastic "bundlesize")](https://bundlephobia.com/package/@i18n-pro/react "bundlesize")

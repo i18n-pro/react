@@ -7,6 +7,7 @@ import LiveDemo from './LiveDemo'
 import Principle from './Principle'
 import HelpDoc from './HelpDoc'
 import License from './License'
+import Requirement from './Requirement'
 
 export default function Doc(props) {
   initI18n(props)
@@ -16,6 +17,7 @@ export default function Doc(props) {
       <Top />
       <TableOfContents text={t('目录')} open={false} />
       <Vision />
+      <Requirement />
       <Feature />
       <LiveDemo />
       <Principle />
