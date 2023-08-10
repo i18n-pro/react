@@ -11,7 +11,7 @@
     "resolveJsonModule": true,
     "declaration": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx"
+    "jsx": "react"
   },
   "include": [
     "src/",
