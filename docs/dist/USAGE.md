@@ -21,11 +21,11 @@
 ## 1. 安装
 
 ```bash
-npm i i18n-pro/react
+npm i @i18n-pro/react
 # 或者
-yarn add i18n-pro/react
+yarn add @i18n-pro/react
 # 或者
-pnpm i i18n-pro/react
+pnpm i @i18n-pro/react
 ```
 
 ## 2. 接入API

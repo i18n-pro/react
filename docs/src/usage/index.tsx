@@ -33,11 +33,11 @@ function Install() {
       <H2>{`1. ${t('安装')}`}</H2>
       <CodeBlock
         langType="bash"
-        code={`npm i ${packageName}
+        code={`npm i @${packageName}
 # ${t('或者')}
-yarn add ${packageName}
+yarn add @${packageName}
 # ${t('或者')}
-pnpm i ${packageName}`}
+pnpm i @${packageName}`}
       />
     </>
   )
