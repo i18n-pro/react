@@ -7,8 +7,6 @@ import {
   Link,
   render,
   TableOfContents,
-  AsyncWrapper,
-  BlockQuote,
 } from 'jsx-to-md'
 import I18nProWrapper from '../components/I18nProWrapper'
 import { Package } from '../types'
@@ -17,7 +15,6 @@ import {
   initI18n,
   getTranslationText,
   packageName,
-  getI18nPro,
   getI18nProFile,
   getI18nProDocHref,
 } from '../utils'
@@ -101,30 +98,15 @@ function InitConfig(props: I18nProProps) {
     <>
       <Break />
       <H2>{`3. ${t('初始化命令行配置文件')}`}</H2>
-      {t('在命令行终端输入如下命令，')}
-      <Link href={getI18nProDocHref(i18nProPkg, 'COMMAND_LINE', t('命令列表'))}>
-        {t('更多命令')}
+      <Link
+        href={getI18nProDocHref(
+          i18nProPkg,
+          'USAGE',
+          `3. ${t('初始化命令行配置文件')}`,
+        )}
+      >
+        {t('请参考')}
       </Link>
-      <CodeBlock langType="bash" code={`npx i18n init `} />
-      {t(
-        '命令执行成功后会在当前目录下生成一个{0}的文件，默认配置如下：',
-        ' `i18nrc.js` ',
-      )}
-      <AsyncWrapper data={i18nrcContent}>
-        {({ content }) => {
-          return (
-            <>
-              <BlockQuote>
-                {t(
-                  '当前模板是基于{0}生成',
-                  getI18nPro('link', i18nProPkg.version),
-                )}
-              </BlockQuote>
-              <CodeBlock code={content} />
-            </>
-          )
-        }}
-      </AsyncWrapper>
     </>
   )
 }
@@ -136,72 +118,33 @@ function ModifyConfig(props: I18nProProps) {
     <>
       <Break />
       <H2>{`4. ${t('调整{0}配置', ' `i18nrc.js` ')}`}</H2>
-      {t(
-        '根据需求自行调整配置文件中的配置项，配置项的{0}',
-        render(
-          <Link
-            href={getI18nProDocHref(
-              i18nProPkg,
-              'COMMAND_LINE',
-              `1. ${t('{0}配置', ' `i18nrc.js` ')}`,
-            )}
-          >
-            {t('说明')}
-          </Link>,
-        ),
-      )}
+      <Link
+        href={getI18nProDocHref(
+          i18nProPkg,
+          'USAGE',
+          `4. ${t('调整{0}配置', ' `i18nrc.js` ')}`,
+        )}
+      >
+        {t('请参考')}
+      </Link>
     </>
   )
 }
 
-function ExecuteTranslateCommand() {
+function ExecuteTranslateCommand(props: I18nProProps) {
   return (
     <>
       <Break />
       <H2>{`5. ${t('执行翻译命令')}`}</H2>
-      <CodeBlock langType="bash" code={`npx i18n t `} />
-      {t('命令执行成功的话，会在指定的目录下生成语言包文件')}
-      <br />
-      <br />
-      {t(
-        '默认配置下，生成的语言包是每个语言单独文件形式{0}，会生成{1}个语言包：{2}和{3}',
-        "（`output.langType == 'multiple'`）",
-        ' `2` ',
-        ' `zh.json` ',
-        ' `ja.json` ',
-      )}
-      <CodeBlock
-        langType="text"
-        code={`// zh.json
-{
-  "hello world": "你好世界"
-}
-
-// ja.json
-{
-  "hello world": "こんにちは世界"
-}
-`}
-      />
-      {t(
-        '如果生成的语言包是聚合的形式{0}，会生成{1}个语言包：{2}',
-        "（`output.langType == 'single'`）",
-        ' `1` ',
-        ' `langs.json` ',
-      )}
-      <CodeBlock
-        langType="text"
-        code={`// langs.json
-{
-  "zh": {
-    "hello world": "你好世界"
-  },
-  "ja": {
-    "hello world": "こんにちは世界"
-  }
-}
-`}
-      />
+      <Link
+        href={getI18nProDocHref(
+          props.i18nProPkg,
+          'USAGE',
+          `5. ${t('执行翻译命令')}`,
+        )}
+      >
+        {t('请参考')}
+      </Link>
     </>
   )
 }
@@ -364,7 +307,7 @@ export default function Usage(props) {
             <LinkApi />
             <InitConfig i18nProPkg={i18nProPkg} />
             <ModifyConfig i18nProPkg={i18nProPkg} />
-            <ExecuteTranslateCommand />
+            <ExecuteTranslateCommand i18nProPkg={i18nProPkg} />
             <ImportLangs />
             <SwitchLang />
             <Demo />

@@ -22,6 +22,12 @@ const api = {
   name: 'API',
 }
 
+const changeLog = {
+  entry: 'docs/src/changelog',
+  out: 'docs/dist/',
+  name: 'CHANGELOG',
+}
+
 function getSource({ entry, out, name }) {
   const source = Object.entries(codeNameMap).reduce(
     (res, [locale, langName]) => {
@@ -46,5 +52,10 @@ function getSource({ entry, out, name }) {
 }
 
 module.exports = {
-  source: [...getSource(readme), ...getSource(usage), ...getSource(api)],
+  source: [
+    ...getSource(readme),
+    ...getSource(usage),
+    ...getSource(api),
+    ...getSource(changeLog),
+  ],
 }

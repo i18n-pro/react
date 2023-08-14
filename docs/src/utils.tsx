@@ -1,10 +1,11 @@
-import { getAnchor, Link, render } from 'jsx-to-md'
+import { getAnchor, Link, render, Break } from 'jsx-to-md'
 import { initI18n as originInitI18n, Translate } from 'i18n-pro'
 import { readFileSync } from 'fs'
 import en from './i18n/en.json'
 import packageInfo, { name } from '../../package.json'
 import fetch from './fetch'
 import { Package } from './types'
+import { langs } from './constants'
 
 const { t, setI18n } = originInitI18n({ namespace: 'default' })
 
@@ -29,9 +30,10 @@ export function getDocHrefImpl(
   packageInfo: Package,
   filename: string,
   anchorProp?: string,
+  localeProp?: string,
 ) {
   const { version, codeNameMap, homepage } = packageInfo
-  const locale = global.docLocale
+  const locale = localeProp || global.docLocale
   let name = codeNameMap[locale]
   name = name ? `_${name}` : ''
   const anchor = anchorProp ? getAnchor(anchorProp) : ''
@@ -45,8 +47,12 @@ export function getDocHrefImpl(
   }
 }
 
-export function getDocHref(filename: string, anchorProp?: string) {
-  return getDocHrefImpl(packageInfo, filename, anchorProp)
+export function getDocHref(
+  filename: string,
+  anchorProp?: string,
+  localeProp?: string,
+) {
+  return getDocHrefImpl(packageInfo, filename, anchorProp, localeProp)
 }
 
 export function getI18nProDocHref(
@@ -193,4 +199,33 @@ export function getVariableInterpolation(normal = false) {
 export function getInterpolationVariable(normal = false) {
   const text = t('插值变量')
   return getText(text, normal)
+}
+
+export function renderLanguage(filename: string) {
+  const separator = ' | '
+
+  const res = langs.reduce((res, item, index) => {
+    const { code, name } = item
+
+    if (global.docLocale == code) {
+      res.push(name)
+    } else {
+      res.push(<Link href={getDocHref(filename, undefined, code)}>{name}</Link>)
+    }
+
+    if (index != langs.length - 1) {
+      res.push(separator)
+    }
+
+    return res
+  }, [])
+  return (
+    <>
+      <Break />
+      <Break />
+      {res}
+      <Break />
+      <Break />
+    </>
+  )
 }

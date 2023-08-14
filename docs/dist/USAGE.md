@@ -66,68 +66,13 @@ render(
 
 
 ## 3. 初始化命令行配置文件
-在命令行终端输入如下命令，[更多命令](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/COMMAND_LINE.md#命令列表)
-```bash
-npx i18n init 
-```
-命令执行成功后会在当前目录下生成一个 `i18nrc.js` 的文件，默认配置如下：
->当前模板是基于 [i18n-pro@2.0.0](https://github.com/i18n-pro/core/tree/v2.0.0 "i18n-pro@2.0.0") 生成
-```js
-const { join } = require('path')
-
-module.exports = {
-  funcName: 't',
-  entry: join(__dirname, './src/'),
-  fileRegExp: /\.[jt]s$/,
-  output: {
-    path: join(__dirname, './i18n/'),
-  },
-  translator: 'googlex',
-  googlexConfig: {
-    from: 'en',
-    to: ['zh-CN', 'ja'],
-    codeLocaleMap: {
-      'zh-CN': 'zh',
-    },
-    // proxy: 'http://127.0.0.1:1087',
-  },
-}
-```
-
+[请参考](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE.md#3-初始化命令行配置文件)
 
 ## 4. 调整 `i18nrc.js` 配置
-根据需求自行调整配置文件中的配置项，配置项的[说明](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/COMMAND_LINE.md#1--i18nrcjs-配置)
+[请参考](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE.md#4-调整-i18nrcjs-配置)
 
 ## 5. 执行翻译命令
-
-```bash
-npx i18n t 
-```
-命令执行成功的话，会在指定的目录下生成语言包文件<br /><br />默认配置下，生成的语言包是每个语言单独文件形式（`output.langType == 'multiple'`），会生成 `2` 个语言包： `zh.json` 和 `ja.json` 
-```text
-// zh.json
-{
-  "hello world": "你好世界"
-}
-
-// ja.json
-{
-  "hello world": "こんにちは世界"
-}
-```
-如果生成的语言包是聚合的形式（`output.langType == 'single'`），会生成 `1` 个语言包： `langs.json` 
-```text
-// langs.json
-{
-  "zh": {
-    "hello world": "你好世界"
-  },
-  "ja": {
-    "hello world": "こんにちは世界"
-  }
-}
-```
-
+[请参考](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE.md#5-执行翻译命令)
 
 ## 6. 引入语言包
 语言包已经有了，就需要应用到项目中了
