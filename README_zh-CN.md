@@ -13,7 +13,7 @@
 [![github-issues](https://img.shields.io/github/issues-raw/i18n-pro/react "github-issues")](https://github.com/i18n-pro/react/issues "github-issues")
 [![codecov](https://codecov.io/gh/i18n-pro/react/branch/main/graph/badge.svg?token=GQ6S1GPFCM "codecov")](https://codecov.io/gh/i18n-pro/react "codecov")
 
-![demo](https://s3.bmp.ovh/imgs/2023/08/13/b72cc3d74e09279d.gif)
+![demo](https://s3.bmp.ovh/imgs/2023/08/28/5c842995a00d48ae.gif)
 
 </div>
 <details >
