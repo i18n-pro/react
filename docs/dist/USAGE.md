@@ -8,7 +8,7 @@
   &emsp;&emsp;[1. 安装](#1-安装)<br/>
   &emsp;&emsp;[2. 接入API](#2-接入api)<br/>
   &emsp;&emsp;&emsp;&emsp;[配置初始状态](#配置初始状态)<br/>
-  &emsp;&emsp;&emsp;&emsp;[接入 `I18nProvider` 和 `useI18n` ，并用 `t` 包裹 `Translation Text` ](#接入-i18nprovider-和-usei18n-，并用-t-包裹-translation-text)<br/>
+  &emsp;&emsp;&emsp;&emsp;[接入 `I18nProvider` 和 `useI18n` ，并用 `t` 包裹 `Translation Text` ](#接入-i18nprovider-和-usei18n-并用-t-包裹-translation-text)<br/>
   &emsp;&emsp;[3. 初始化命令行配置文件](#3-初始化命令行配置文件)<br/>
   &emsp;&emsp;[4. 调整 `i18nrc.js` 配置](#4-调整-i18nrcjs-配置)<br/>
   &emsp;&emsp;[5. 执行翻译命令](#5-执行翻译命令)<br/>
