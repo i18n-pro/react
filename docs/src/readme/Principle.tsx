@@ -1,4 +1,4 @@
-import { Break, H1, Bold, CodeBlock, List } from 'jsx-to-md'
+import React, { Break, H1, Bold, CodeBlock, List } from 'jsx-to-md'
 import { getI18nPro, getI18nProviderDesc, getUseI18nDesc } from '../utils'
 
 export default function Principle() {

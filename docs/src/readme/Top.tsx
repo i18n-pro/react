@@ -1,4 +1,4 @@
-import { Image, Link, Break } from 'jsx-to-md'
+import React, { Image, Link, Break } from 'jsx-to-md'
 import { linkObj, imageObj, langs } from '../constants'
 import { homepage, version } from '../../../package.json'
 

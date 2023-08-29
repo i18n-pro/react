@@ -1,4 +1,4 @@
-import { H1, render, TableOfContents } from 'jsx-to-md'
+import React, { H1, render, TableOfContents } from 'jsx-to-md'
 import I18nProWrapper from '../components/I18nProWrapper'
 import SpecialStatement from '../components/SpecialStatement'
 import { Package } from '../types'

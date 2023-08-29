@@ -1,4 +1,4 @@
-import { H1, TableOfContents } from 'jsx-to-md'
+import React, { H1, TableOfContents } from 'jsx-to-md'
 import { initI18n, renderLanguage } from '../utils'
 import Template from './ChangeLog'
 

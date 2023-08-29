@@ -1,4 +1,4 @@
-import {
+import React, {
   Break,
   H1,
   H2,
@@ -15,7 +15,6 @@ import {
   initI18n,
   getTranslationText,
   packageName,
-  getI18nProFile,
   getI18nProDocHref,
 } from '../utils'
 import SpecialStatement from '../components/SpecialStatement'
@@ -92,7 +91,6 @@ render(
 
 function InitConfig(props: I18nProProps) {
   const { i18nProPkg } = props
-  const i18nrcContent = getI18nProFile('/template/i18nrc.js')
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { BlockQuote, Break } from 'jsx-to-md'
+import React, { BlockQuote } from 'jsx-to-md'
 import { getI18nPro } from '../utils'
 import { Package } from '../types'
 export interface SpecialStatementProps {

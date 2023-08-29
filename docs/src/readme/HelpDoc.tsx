@@ -1,4 +1,4 @@
-import { H1, List, Link } from 'jsx-to-md'
+import React, { H1, List, Link } from 'jsx-to-md'
 import I18nProWrapper from '../components/I18nProWrapper'
 import { getDocHref, getI18nPro, getI18nProDocHref } from '../utils'
 import SpecialStatement from '../components/SpecialStatement'

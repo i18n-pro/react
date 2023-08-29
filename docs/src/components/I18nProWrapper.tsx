@@ -1,4 +1,4 @@
-import { AsyncWrapper } from 'jsx-to-md'
+import React, { AsyncWrapper } from 'jsx-to-md'
 import { getI18nProPackage } from '../utils'
 import { Package } from '../types'
 export interface I18nProWrapperProps {

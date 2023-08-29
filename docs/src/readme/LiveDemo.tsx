@@ -1,4 +1,4 @@
-import { H1, Link, Image, List } from 'jsx-to-md'
+import React, { H1, Link, Image, List } from 'jsx-to-md'
 import { githubKey } from '../constants'
 
 export default function LiveDemo() {

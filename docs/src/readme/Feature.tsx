@@ -1,4 +1,4 @@
-import { H1, Link, Image, Bold, List, render } from 'jsx-to-md'
+import React, { H1, Link, Image, Bold, List, render } from 'jsx-to-md'
 import { linkObj, imageObj } from '../constants'
 import { getI18nPro } from '../utils'
 

@@ -1,4 +1,4 @@
-import { getAnchor, Link, render, Break } from 'jsx-to-md'
+import React, { getAnchor, Link, render, Break } from 'jsx-to-md'
 import { initI18n as originInitI18n, Translate } from 'i18n-pro'
 import { readFileSync } from 'fs'
 import en from './i18n/en.json'

@@ -1,4 +1,4 @@
-import { Break, H2, H3 } from 'jsx-to-md'
+import React, { Break, H2, H3 } from 'jsx-to-md'
 
 export interface FunctionTemplate {
   name: string

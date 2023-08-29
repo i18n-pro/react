@@ -1,4 +1,4 @@
-import { List, H3, H2, H4 } from 'jsx-to-md'
+import React, { List, H3, H2, H4 } from 'jsx-to-md'
 
 type Items = Parameters<typeof List>[0]['items']
 
