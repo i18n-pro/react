@@ -1,12 +1,23 @@
-import { Break, H1, render, H3, TableOfContents, getAnchor } from 'jsx-to-md'
+import { H1, render, TableOfContents } from 'jsx-to-md'
 import I18nProWrapper from '../components/I18nProWrapper'
 import SpecialStatement from '../components/SpecialStatement'
 import { Package } from '../types'
-import { getI18nProDocHref, initI18n } from '../utils'
+import {
+  getI18nProDocHref,
+  getI18nProviderDesc,
+  getUseI18nDesc,
+  initI18n,
+} from '../utils'
 import FunctionTemplate from './FunctionTemplate'
 
 type I18nProProps = {
   i18nProPkg: Package
+}
+
+function getTitleToA(i18nProPkg: Package, title: string) {
+  return render(
+    <a href={getI18nProDocHref(i18nProPkg, 'API', title)}>{title}</a>,
+  )
 }
 
 function I18nProvider(props: I18nProProps) {
@@ -16,9 +27,12 @@ function I18nProvider(props: I18nProProps) {
     <>
       <FunctionTemplate
         name="I18nProvider"
-        description={t('配置国际化初始化属性的容器组件')}
+        description={getI18nProviderDesc()}
         type={`(
-  props: I18nState & { children: React.ReactNode },
+  props: ${getTitleToA(
+    i18nProPkg,
+    'i18nState',
+  )} & { children: React.ReactNode },
 ) => JSX.Element`}
         propsDesc={
           <>
@@ -43,21 +57,15 @@ function I18nProvider(props: I18nProProps) {
 function UseI18n(props: I18nProProps) {
   const { i18nProPkg } = props
 
-  function getTitleToA(title: string) {
-    return render(
-      <a href={getI18nProDocHref(i18nProPkg, 'API', title)}>{title}</a>,
-    )
-  }
-
   return (
     <>
       <FunctionTemplate
         name="useI18n"
-        description={t('获取国际化 API 和状态的 hook 方法')}
+        description={getUseI18nDesc()}
         type={`() => ({
-  ${getTitleToA('t')},
-  ${getTitleToA('setI18n')},
-  ${getTitleToA('i18nState')},
+  ${getTitleToA(i18nProPkg, 't')},
+  ${getTitleToA(i18nProPkg, 'setI18n')},
+  ${getTitleToA(i18nProPkg, 'i18nState')},
 })`}
       />
     </>

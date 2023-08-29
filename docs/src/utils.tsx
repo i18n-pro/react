@@ -229,3 +229,11 @@ export function renderLanguage(filename: string) {
     </>
   )
 }
+
+export function getI18nProviderDesc() {
+  return t('配置国际化初始化属性的容器组件')
+}
+
+export function getUseI18nDesc() {
+  return t('获取国际化 API 和状态的 hook 方法')
+}

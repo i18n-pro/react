@@ -20,7 +20,7 @@ English | [简体中文](https://github.com/i18n-pro/react/blob/vdoc/README_zh-C
   <summary>Table of Contents</summary>
 
   [Vision](#vision)<br/>
-  [要求](#要求)<br/>
+  [Requirement](#requirement)<br/>
   [Features](#features)<br/>
   [Live Demo](#live-demo)<br/>
   [Principle](#principle)<br/>
@@ -31,7 +31,7 @@ English | [简体中文](https://github.com/i18n-pro/react/blob/vdoc/README_zh-C
 
 # Vision
 To make internationalization easy and enjoyable 😄💪🏻
-# 要求
+# Requirement
 
 * react >= **16.8.0**
 * react-dom >= **16.8.0**
@@ -103,8 +103,8 @@ render(
 
 # Help Document
 
->为了避免不必要的重复文档内容，该库的部分文档是链接 `i18n-pro` 中的内容<br />当前文档中 `i18n-pro` 相关链接是基于 `2.0.0` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致
-* 当前库
+>To avoid unnecessary duplicate document content, some of the documents in this library are linked to the content in  `i18n-pro` <br />The  `i18n-pro`  related link in the current document is based on the  `2.0.0`  version. If you are using a different version, you need to check the document corresponding to the version you are using to avoid inconsistent usage
+* Current Library
    * [Quick Start](https://github.com/i18n-pro/react/blob/vdoc/docs/dist/USAGE.md)
    * [API](https://github.com/i18n-pro/react/blob/vdoc/docs/dist/API.md)
    * [Changelog](https://github.com/i18n-pro/react/blob/vdoc/docs/dist/CHANGELOG.md)

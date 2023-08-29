@@ -1,5 +1,5 @@
 import { Break, H1, Bold, CodeBlock, List } from 'jsx-to-md'
-import { getI18nPro } from '../utils'
+import { getI18nPro, getI18nProviderDesc, getUseI18nDesc } from '../utils'
 
 export default function Principle() {
   return (
@@ -17,10 +17,10 @@ export default function Principle() {
       <List items={['U', 'I18nProvider', 'useI18n']} />
       <Break />
       <Break />
-      <Bold>I18nProvider</Bold>：{t('配置国际化初始化属性的容器组件')}
+      <Bold>I18nProvider</Bold>：{getI18nProviderDesc()}
       <Break />
       <Break />
-      <Bold>useI18n</Bold>：{t('获取国际化 API 和状态的 hook 方法')}
+      <Bold>useI18n</Bold>：{getUseI18nDesc()}
       <Break />
       <Break />
       <Break />

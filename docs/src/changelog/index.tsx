@@ -6,7 +6,7 @@ function V_1_0_0() {
   return (
     <Template
       version="1.0.0"
-      date="2022-03-xx"
+      date="2023-08-xx"
       api={{
         added: [
           'U',

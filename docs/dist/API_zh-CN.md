@@ -18,7 +18,7 @@
 <h3 id="i18nprovider-类型">类型</h3>
 <pre>
 (
-  props: I18nState & { children: React.ReactNode },
+  props: <a href="https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/API_zh-CN.md#i18nstate">i18nState</a> & { children: React.ReactNode },
 ) => JSX.Element
 </pre>
 

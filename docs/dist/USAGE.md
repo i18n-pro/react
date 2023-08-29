@@ -1,36 +1,36 @@
 
 # Quick Start
 
->为了避免不必要的重复文档内容，该库的部分文档是链接 `i18n-pro` 中的内容<br />当前文档中 `i18n-pro` 相关链接是基于 `2.0.0` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致
+>To avoid unnecessary duplicate document content, some of the documents in this library are linked to the content in  `i18n-pro` <br />The  `i18n-pro`  related link in the current document is based on the  `2.0.0`  version. If you are using a different version, you need to check the document corresponding to the version you are using to avoid inconsistent usage
 <details >
   <summary>Table of Contents</summary>
 
-  &emsp;&emsp;[1. 安装](#1-安装)<br/>
-  &emsp;&emsp;[2. 接入API](#2-接入api)<br/>
-  &emsp;&emsp;&emsp;&emsp;[配置初始状态](#配置初始状态)<br/>
-  &emsp;&emsp;&emsp;&emsp;[接入 `I18nProvider` 和 `useI18n` ，并用 `t` 包裹 `Translation Text` ](#接入-i18nprovider-和-usei18n-并用-t-包裹-translation-text)<br/>
-  &emsp;&emsp;[3. 初始化命令行配置文件](#3-初始化命令行配置文件)<br/>
-  &emsp;&emsp;[4. 调整 `i18nrc.js` 配置](#4-调整-i18nrcjs-配置)<br/>
-  &emsp;&emsp;[5. 执行翻译命令](#5-执行翻译命令)<br/>
-  &emsp;&emsp;[6. 引入语言包](#6-引入语言包)<br/>
-  &emsp;&emsp;[7. 切换语言](#7-切换语言)<br/>
+  &emsp;&emsp;[1. Install](#1-install)<br/>
+  &emsp;&emsp;[2. Access API](#2-access-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Configure initial state](#configure-initial-state)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Connect  `I18nProvider`  and  `useI18n` , and wrap  `Translation Text`  with  `t` ](#connect--i18nprovider--and--usei18n--and-wrap--translation-text--with--t)<br/>
+  &emsp;&emsp;[3. Initialize Command Line Configuration File](#3-initialize-command-line-configuration-file)<br/>
+  &emsp;&emsp;[4. Adjust  `i18nrc.js`  Configuration](#4-adjust--i18nrcjs--configuration)<br/>
+  &emsp;&emsp;[5. Execute Translation Command](#5-execute-translation-command)<br/>
+  &emsp;&emsp;[6. Importing Language Pack](#6-importing-language-pack)<br/>
+  &emsp;&emsp;[7. Switch Language](#7-switch-language)<br/>
   &emsp;&emsp;[8. Demo](#8-demo)<br/>
 
 </details>
 
-## 1. 安装
+## 1. Install
 
 ```bash
 npm i @i18n-pro/react
-# 或者
+# or
 yarn add @i18n-pro/react
-# 或者
+# or
 pnpm i @i18n-pro/react
 ```
 
-## 2. 接入API
+## 2. Access API
 
-### 配置初始状态
+### Configure initial state
 
 ```js
 // i18n.ts
@@ -41,7 +41,7 @@ export default {
 } as I18nState
 ```
 
-### 接入 `I18nProvider` 和 `useI18n` ，并用 `t` 包裹 `Translation Text` 
+### Connect  `I18nProvider`  and  `useI18n` , and wrap  `Translation Text`  with  `t` 
 
 ```js
 // App.tsx
@@ -65,19 +65,19 @@ render(
 ```
 
 
-## 3. 初始化命令行配置文件
-[请参考](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE.md#3-初始化命令行配置文件)
+## 3. Initialize Command Line Configuration File
+[Please refer to](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE.md#3-initialize-command-line-configuration-file)
 
-## 4. 调整 `i18nrc.js` 配置
-[请参考](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE.md#4-调整-i18nrcjs-配置)
+## 4. Adjust  `i18nrc.js`  Configuration
+[Please refer to](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE.md#4-adjust--i18nrcjs--configuration)
 
-## 5. 执行翻译命令
-[请参考](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE.md#5-执行翻译命令)
+## 5. Execute Translation Command
+[Please refer to](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE.md#5-execute-translation-command)
 
-## 6. 引入语言包
-语言包已经有了，就需要应用到项目中了
+## 6. Importing Language Pack
+The language pack already exists, so it needs to be applied to the project
 
-如果生成的语言包是每个语言单独文件形式（`output.langType == 'multiple'`），操作如下：
+If the generated language pack is a separate file form （`output.langType == 'multiple'`） for each language, the operation is as follows:
 ```diff
 // i18n.ts
 import { I18nState } from 'i18n-pro/react'
@@ -93,7 +93,7 @@ export default {
 +  },
 } as I18nState
 ```
-如果生成的语言包是聚合的形式（`output.langType == 'single'`），操作如下：
+If the generated language pack is in the form of aggregation （`output.langType == 'single'`）, the operation is as follows:
 ```diff
 // i18n.ts
 import { I18nState } from 'i18n-pro/react'
@@ -105,10 +105,10 @@ export default {
 +  langs,
 } as I18nState
 ```
-至此，项目已经完全接入了国际化，上面 `locale` 指定为目标语言中任意一个，在页面上就能看到翻译好的内容了。后续如果项目中有新增的 `Translation Text` （需要用 `t` 函数包裹哟），就仅仅需要再次执行翻译命令 `npx i18n t` 生成最新的语言包就可以了
+At this point, the project has been completely connected to internationalization. The above  `locale`  specifies any of the target language, and the translated content can be seen on the page. If there are new  `Translation Text`  (need to be wrapped with  `t`  function) in the subsequent project, you only need to execute the translation command  `npx i18n t`  again to generate the latest language package
 
-## 7. 切换语言
-可以通过 `setI18n` 来切换语言
+## 7. Switch Language
+You can switch languages through  `setI18n` 
 ```diff
 // SwitchLang.tsx
 import React from 'react'
@@ -167,4 +167,4 @@ render(
 
 
 ## 8. Demo
-真实代码示例可参考 `README` 文档中的 [Live Demo](https://github.com/i18n-pro/react/tree/vdoc#live-demo) 
+Real code examples can refer to  [Live Demo](https://github.com/i18n-pro/react/tree/vdoc#live-demo)  in the  `README`  document
