@@ -167,4 +167,4 @@ render(
 
 
 ## 8. Demo
-Real code examples can refer to  [Live Demo](https://github.com/i18n-pro/react/tree/v0.1.0-alpha.5#live-demo)  in the  `README`  document
+Real code examples can refer to  [Live Demo](https://github.com/i18n-pro/react/tree/v0.1.0-alpha.6#live-demo)  in the  `README`  document
