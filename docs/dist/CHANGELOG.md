@@ -2,7 +2,7 @@
 # Changelog
 
 
-English | [简体中文](https://github.com/i18n-pro/react/blob/vdoc/docs/dist/CHANGELOG_zh-CN.md)
+English | [简体中文](https://github.com/i18n-pro/react/blob/v0.1.0-alpha.5/docs/dist/CHANGELOG_zh-CN.md)
 
 
 <details >
