@@ -23,17 +23,19 @@ type I18nProProps = {
   i18nProPkg: Package
 }
 
+const showPackageName = `@${packageName}`
+
 function Install() {
   return (
     <>
       <H2>{`1. ${t('安装')}`}</H2>
       <CodeBlock
         langType="bash"
-        code={`npm i @${packageName}
+        code={`npm i ${showPackageName}
 # ${t('或者')}
-yarn add @${packageName}
+yarn add ${showPackageName}
 # ${t('或者')}
-pnpm i @${packageName}`}
+pnpm i ${showPackageName}`}
       />
     </>
   )
@@ -47,7 +49,7 @@ function LinkApi() {
       <CodeBlock
         code={`
 // i18n.ts
-import { I18nState } from '${packageName}'
+import { I18nState } from '${showPackageName}'
 
 export default {
   namespace: 'testNamespace',
@@ -68,7 +70,7 @@ export default {
 // App.tsx
 import React from 'react'
 import { render } from 'react-dom'
-import { useI18n } from '@i18n-pro/react'
+import { useI18n } from '${showPackageName}'
 import i18nState from './i18n.ts'
 
 function App() {
@@ -163,7 +165,7 @@ function ImportLangs() {
         langType="diff"
         code={`
 // i18n.ts
-import { I18nState } from '${packageName}'
+import { I18nState } from '${showPackageName}'
 + import zh from './i18n/zh.json'
 + import ja from './i18n/ja.json'
 
@@ -185,7 +187,7 @@ export default {
         langType="diff"
         code={`
 // i18n.ts
-import { I18nState } from '${packageName}'
+import { I18nState } from '${showPackageName}'
 + import langs from './i18n/langs.json'
 
 export default {
@@ -217,7 +219,7 @@ function SwitchLang() {
         code={`
 // SwitchLang.tsx
 import React from 'react'
-import { useI18n } from '@i18n-pro/react'
+import { useI18n } from '${showPackageName}'
 
 export default function SwitchLang() {
   const { setI18n, i18nState } = useI18n()
@@ -246,7 +248,7 @@ export default function SwitchLang() {
 // App.tsx
 import React from 'react'
 import { render } from 'react-dom'
-import { useI18n } from '@i18n-pro/react'
+import { useI18n } from '${showPackageName}'
 import i18nState from './i18n.ts'
 + import SwitchLang from './SwitchLang'
 

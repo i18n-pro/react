@@ -34,7 +34,7 @@ pnpm i @i18n-pro/react
 
 ```js
 // i18n.ts
-import { I18nState } from 'i18n-pro/react'
+import { I18nState } from '@i18n-pro/react'
 
 export default {
   namespace: 'testNamespace',
@@ -80,7 +80,7 @@ render(
 如果生成的语言包是每个语言单独文件形式（`output.langType == 'multiple'`），操作如下：
 ```diff
 // i18n.ts
-import { I18nState } from 'i18n-pro/react'
+import { I18nState } from '@i18n-pro/react'
 + import zh from './i18n/zh.json'
 + import ja from './i18n/ja.json'
 
@@ -96,7 +96,7 @@ export default {
 如果生成的语言包是聚合的形式（`output.langType == 'single'`），操作如下：
 ```diff
 // i18n.ts
-import { I18nState } from 'i18n-pro/react'
+import { I18nState } from '@i18n-pro/react'
 + import langs from './i18n/langs.json'
 
 export default {

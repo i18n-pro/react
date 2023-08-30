@@ -34,7 +34,7 @@ pnpm i @i18n-pro/react
 
 ```js
 // i18n.ts
-import { I18nState } from 'i18n-pro/react'
+import { I18nState } from '@i18n-pro/react'
 
 export default {
   namespace: 'testNamespace',
@@ -80,7 +80,7 @@ The language pack already exists, so it needs to be applied to the project
 If the generated language pack is a separate file form （`output.langType == 'multiple'`） for each language, the operation is as follows:
 ```diff
 // i18n.ts
-import { I18nState } from 'i18n-pro/react'
+import { I18nState } from '@i18n-pro/react'
 + import zh from './i18n/zh.json'
 + import ja from './i18n/ja.json'
 
@@ -96,7 +96,7 @@ export default {
 If the generated language pack is in the form of aggregation （`output.langType == 'single'`）, the operation is as follows:
 ```diff
 // i18n.ts
-import { I18nState } from 'i18n-pro/react'
+import { I18nState } from '@i18n-pro/react'
 + import langs from './i18n/langs.json'
 
 export default {
