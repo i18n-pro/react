@@ -56,5 +56,6 @@
   "接入{0}和{1}，并用{2}包裹{3}": "Connect {0} and {1}, and wrap {3} with {2}",
   "请参考": "Please refer to",
   "可以通过{0}来切换语言": "You can switch languages through {0}",
-  "真实代码示例可参考{0}文档中的{1}": "Real code examples can refer to {1} in the {0} document"
+  "真实代码示例可参考{0}文档中的{1}": "Real code examples can refer to {1} in the {0} document",
+  "注意：为了避免幽灵依赖导致 i18n 命令不能使用的问题，使用 pnpm 必须要安装 i18n-pro": "Note: To prevent issues where the i18n command cannot be used due to ghost dependencies, it is essential to install i18n-pro when using pnpm"
 }

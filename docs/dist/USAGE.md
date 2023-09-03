@@ -25,7 +25,8 @@ npm i @i18n-pro/react
 # or
 yarn add @i18n-pro/react
 # or
-pnpm i @i18n-pro/react
+# Note: To prevent issues where the i18n command cannot be used due to ghost dependencies, it is essential to install i18n-pro when using pnpm
+pnpm i i18n-pro @i18n-pro/react
 ```
 
 ## 2. Access API

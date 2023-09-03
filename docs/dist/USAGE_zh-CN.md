@@ -25,7 +25,8 @@ npm i @i18n-pro/react
 # 或者
 yarn add @i18n-pro/react
 # 或者
-pnpm i @i18n-pro/react
+# 注意：为了避免幽灵依赖导致 i18n 命令不能使用的问题，使用 pnpm 必须要安装 i18n-pro
+pnpm i i18n-pro @i18n-pro/react
 ```
 
 ## 2. 接入API
