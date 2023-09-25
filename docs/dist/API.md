@@ -18,12 +18,12 @@ Configure container components for internationalization initialization propertie
 <h3 id="i18nprovider-type">Type</h3>
 <pre>
 (
-  props: <a href="https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/API.md#i18nstate">i18nState</a> & { children: React.ReactNode },
+  props: <a href="https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/API.md#i18nstate">I18nState</a> & { children: React.ReactNode },
 ) => JSX.Element
 </pre>
 
 <h3 id="i18nprovider-parameter-description">Parameter Description</h3>
-The other attributes are consistent with the  <a href="https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/API.md#initi18n">initI18n</a>  parameter<table>
+The other parameters are consistent with the  <a href="https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/API.md#initi18n">initI18n</a>  parameters<table>
   <tr>
     <th>Parameter name</th>
     <th>Description</th>
@@ -37,7 +37,7 @@ The other attributes are consistent with the  <a href="https://github.com/i18n-p
 </table>
 
 ## useI18n
-Hook method for obtaining internationalization API and status
+Hook method for obtaining internationalization API and state
 <h3 id="usei18n-type">Type</h3>
 <pre>
 () => ({

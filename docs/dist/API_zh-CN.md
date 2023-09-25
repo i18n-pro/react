@@ -18,12 +18,12 @@
 <h3 id="i18nprovider-类型">类型</h3>
 <pre>
 (
-  props: <a href="https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/API_zh-CN.md#i18nstate">i18nState</a> & { children: React.ReactNode },
+  props: <a href="https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/API_zh-CN.md#i18nstate">I18nState</a> & { children: React.ReactNode },
 ) => JSX.Element
 </pre>
 
 <h3 id="i18nprovider-参数说明">参数说明</h3>
-其他属性与 <a href="https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/API_zh-CN.md#initi18n">initI18n</a> 参数一致<table>
+其他参数与 <a href="https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/API_zh-CN.md#initi18n">initI18n</a> 参数一致<table>
   <tr>
     <th>参数名</th>
     <th>说明</th>

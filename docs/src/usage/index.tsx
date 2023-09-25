@@ -73,7 +73,7 @@ export default {
 // App.tsx
 import React from 'react'
 import { render } from 'react-dom'
-import { useI18n } from '${showPackageName}'
+import { I18nProvider, useI18n } from '${showPackageName}'
 import i18nState from './i18n.ts'
 
 function App() {
@@ -251,7 +251,7 @@ export default function SwitchLang() {
 // App.tsx
 import React from 'react'
 import { render } from 'react-dom'
-import { useI18n } from '${showPackageName}'
+import { I18nProvider, useI18n } from '${showPackageName}'
 import i18nState from './i18n.ts'
 + import SwitchLang from './SwitchLang'
 

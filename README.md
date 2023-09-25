@@ -66,7 +66,7 @@ Mainly composed of  `2`  parts
 
 **I18nProvider**：Configure container components for internationalization initialization properties
 
-**useI18n**：Hook method for obtaining internationalization API and status
+**useI18n**：Hook method for obtaining internationalization API and state
 
 
 

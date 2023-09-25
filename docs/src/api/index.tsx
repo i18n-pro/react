@@ -31,13 +31,13 @@ function I18nProvider(props: I18nProProps) {
         type={`(
   props: ${getTitleToA(
     i18nProPkg,
-    'i18nState',
+    'I18nState',
   )} & { children: React.ReactNode },
 ) => JSX.Element`}
         propsDesc={
           <>
             {t(
-              '其他属性与{0}参数一致',
+              '其他参数与{0}参数一致',
               ` ${render(
                 <a href={getI18nProDocHref(i18nProPkg, 'API', 'initI18n')}>
                   initI18n
