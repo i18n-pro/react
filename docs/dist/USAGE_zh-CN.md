@@ -1,7 +1,7 @@
 
 # 快速上手
 
->为了避免不必要的重复文档内容，该库的部分文档是链接 `i18n-pro` 中的内容<br />当前文档中 `i18n-pro` 相关链接是基于 `2.0.0` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致
+>为了避免不必要的重复文档内容，该库的部分文档是链接 `i18n-pro` 中的内容<br />当前文档中 `i18n-pro` 相关链接是基于 `2.1.1` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致
 <details >
   <summary>目录</summary>
 
@@ -67,13 +67,13 @@ render(
 
 
 ## 3. 初始化命令行配置文件
-[请参考](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE_zh-CN.md#3-初始化命令行配置文件)
+[请参考](https://github.com/i18n-pro/core/blob/v2.1.1/docs/dist/USAGE_zh-CN.md#3-初始化命令行配置文件)
 
 ## 4. 调整 `i18nrc.js` 配置
-[请参考](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE_zh-CN.md#4-调整-i18nrcjs-配置)
+[请参考](https://github.com/i18n-pro/core/blob/v2.1.1/docs/dist/USAGE_zh-CN.md#4-调整-i18nrcjs-配置)
 
 ## 5. 执行翻译命令
-[请参考](https://github.com/i18n-pro/core/blob/v2.0.0/docs/dist/USAGE_zh-CN.md#5-执行翻译命令)
+[请参考](https://github.com/i18n-pro/core/blob/v2.1.1/docs/dist/USAGE_zh-CN.md#5-执行翻译命令)
 
 ## 6. 引入语言包
 语言包已经有了，就需要应用到项目中了
@@ -168,4 +168,4 @@ render(
 
 
 ## 8. Demo
-真实代码示例可参考 `README` 文档中的 [Live Demo](https://github.com/i18n-pro/react/blob/v1.0.0/README_zh-CN.md#live-demo) 
+真实代码示例可参考 `README` 文档中的 [Live Demo](https://github.com/i18n-pro/react/blob/v1.0.1/README_zh-CN.md#live-demo) 
