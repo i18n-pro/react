@@ -48,6 +48,17 @@ To make internationalization easy and enjoyable 😄💪🏻
    * **automatic-translation**
    * **keyless**
 
+## 🌏  Open in the Cloud 
+Click the button below to start a new development environment:
+
+[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://vscode.dev/github/i18n-pro/react-demo)
+[![Open in Glitch](https://img.shields.io/badge/Open%20in-Glitch-blue?logo=glitch)](https://glitch.com/edit/#!/import/github/i18n-pro/react-demo)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/i18n-pro/react-demo)
+[![Open in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/i18n-pro/react-demo)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/i18n-pro/react-demo)
+[![Open in Repl.it](https://replit.com/badge/github/withastro/astro)](https://replit.com/github/i18n-pro/react-demo)
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/i18n-pro/react-demo)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/i18n-pro/react-demo)
 
 # Live Demo
 
