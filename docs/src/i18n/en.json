@@ -59,5 +59,6 @@
   "真实代码示例可参考{0}文档中的{1}": "Real code examples can refer to {1} in the {0} document",
   "注意：为了避免幽灵依赖导致 i18n 命令不能使用的问题，使用 pnpm 必须要安装 i18n-pro": "Note: To prevent issues where the i18n command cannot be used due to ghost dependencies, it is essential to install i18n-pro when using pnpm",
   "修复部分场景打包器不能解析{0}中{1}配置": "Fix the issue where some bundlers cannot parse the {1} configuration in {0}",
-  "导出{0}更多的{1}类型": "Export more {0}'s {1} types."
+  "导出{0}更多的{1}类型": "Export more {0}'s {1} types.",
+  "限制{0}的版本": "Limit the version of {0}"
 }

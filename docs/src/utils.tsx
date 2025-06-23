@@ -34,7 +34,7 @@ export function getDocHrefImpl(
 ) {
   const { version, codeNameMap, homepage } = packageInfo
   const locale = localeProp || global.docLocale
-  let name = codeNameMap[locale]
+  let name = codeNameMap?.[locale]
   name = name ? `_${name}` : ''
   const anchor = anchorProp ? getAnchor(anchorProp) : ''
 
@@ -141,7 +141,7 @@ function requestCache<T>(key: string, request: () => Promise<T>): Promise<T> {
 
 export async function getI18nProFileImpl(path?: string): Promise<string> {
   // const base = 'https://jsd.linux.sh.cn/gh/i18n-pro/core@main'
-  const base = 'https://fastly.jsdelivr.net/gh/i18n-pro/core@main'
+  const base = 'https://fastly.jsdelivr.net/gh/i18n-pro/core@2'
   // const base = 'https://raw.githubusercontent.com/i18n-pro/core/main'
 
   let res = t(`获取文件${path}错误`)

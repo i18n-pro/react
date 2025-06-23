@@ -2,12 +2,15 @@
 # Changelog
 
 
-English | [简体中文](https://github.com/i18n-pro/react/blob/v1.0.1/docs/dist/CHANGELOG_zh-CN.md)
+English | [简体中文](https://github.com/i18n-pro/react/blob/v1.0.2/docs/dist/CHANGELOG_zh-CN.md)
 
 
 <details >
   <summary>Table of Contents</summary>
 
+  &emsp;&emsp;[[1.0.2] - 2025-06-23](#102---2025-06-23)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#102-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Changed](#102-api-changed)<br/>
   &emsp;&emsp;[[1.0.1] - 2024-09-21](#101---2024-09-21)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#101-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Changed](#101-api-changed)<br/>
@@ -17,6 +20,15 @@ English | [简体中文](https://github.com/i18n-pro/react/blob/v1.0.1/docs/dist
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#100-api-added)<br/>
 
 </details>
+
+## [1.0.2] - 2025-06-23
+
+<h3 id="102-api">API</h3>
+
+<h4 id="102-api-changed">Changed</h4>
+
+* Limit the version of  `i18n-pro` 
+
 
 ## [1.0.1] - 2024-09-21
 
