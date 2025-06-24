@@ -1,6 +1,6 @@
 {
   "name": "@i18n-pro/react",
-  "version": "1.0.2",
+  "version": "2.0.0-alpha.0",
   "description": "An out-of-the-box, lightweight i18n auto-translation solution for React",
   "keywords": [
     "react",

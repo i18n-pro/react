@@ -21,7 +21,6 @@
   "配置国际化初始化属性的容器组件": "Configure container components for internationalization initialization properties",
   "简易示例如下": "A simple example is as follows",
   "hello world": "Hello world",
-  "适用于 React 的轻量、简单、灵活、自动翻译的国际化工具": "Lightweight, simple, flexible, automatic translation internationalization tool for React",
   "获取国际化 API 和状态的 hook 方法": "Hook method for obtaining internationalization API and state",
   "主要由{0}部分构成": "Mainly composed of {0} parts",
   "变量插值": "Variable Interpolation",
@@ -60,5 +59,7 @@
   "注意：为了避免幽灵依赖导致 i18n 命令不能使用的问题，使用 pnpm 必须要安装 i18n-pro": "Note: To prevent issues where the i18n command cannot be used due to ghost dependencies, it is essential to install i18n-pro when using pnpm",
   "修复部分场景打包器不能解析{0}中{1}配置": "Fix the issue where some bundlers cannot parse the {1} configuration in {0}",
   "导出{0}更多的{1}类型": "Export more {0}'s {1} types.",
-  "限制{0}的版本": "Limit the version of {0}"
+  "限制{0}的版本": "Limit the version of {0}",
+  "开箱即用的轻量级 React 国际化自动翻译解决方案": "An out-of-the-box, lightweight i18n auto-translation solution for React",
+  "适配{0}": "Adapt {0}"
 }

@@ -41,7 +41,7 @@ export default function Top() {
   return (
     <div {...props}>
       <p style={{ fontSize: 18 }}>
-        {t('适用于 React 的轻量、简单、灵活、自动翻译的国际化工具')}
+        {t('开箱即用的轻量级 React 国际化自动翻译解决方案')}
       </p>
       {renderLanguage()}
       <Break />
