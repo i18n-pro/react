@@ -3,14 +3,16 @@ import { Translate, SetI18n, I18nState } from 'i18n-pro'
 
 let count = 0
 
-const t: Translate = (t) => {
+const t = ((t) => {
   if (count === 0) {
     console.warn('useI18n should be wrapped by Provider')
     count++
   }
   return t
-}
-const setI18n: SetI18n = (res) => ({ ...res, namespace: 'unknown' })
+}) as Translate
+
+const setI18n: SetI18n = (res) =>
+  Promise.resolve({ ...res, namespace: 'unknown' })
 
 const defaultState: I18nState = {
   namespace: 'unknown',

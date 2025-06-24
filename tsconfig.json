@@ -2,10 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": ".",
-    "module": "CommonJS",
+    "module": "nodenext",
     "target": "ESNext",
     "lib": ["ESNext", "DOM"],
-    "moduleResolution": "Node",
+    "moduleResolution": "nodenext",
     "removeComments": true,
     "outDir": "dist",
     "resolveJsonModule": true,

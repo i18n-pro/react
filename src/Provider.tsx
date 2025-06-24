@@ -12,8 +12,8 @@ export default function Provider(props: ProviderProps) {
   const [state, setState] = useState<I18nState>(restProps)
   const [{ t, setI18n }] = useState(() => initI18n(restProps))
 
-  const setI18nProxy: SetI18n = useCallback((args) => {
-    const newState = setI18n(args)
+  const setI18nProxy: SetI18n = useCallback(async (args) => {
+    const newState = await setI18n(args)
     setState(newState)
 
     return newState

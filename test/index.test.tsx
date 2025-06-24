@@ -1,4 +1,6 @@
 import React, { memo } from 'react'
+import type { SetI18n } from '../src'
+import { describe, it, expect, vi } from 'vitest'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { I18nProvider, useI18n } from '../src'
@@ -70,46 +72,24 @@ it('No I18nProvider is used', () => {
 })
 
 describe('Full Test', () => {
-  it('Single', () => {
+  it('Single', async () => {
     const renderCountRef = {
       current: 0,
+    }
+
+    const setI18nRef = {
+      current: {} as SetI18n,
     }
 
     function Content() {
       const { t, setI18n } = useI18n()
 
       renderCountRef.current++
+      setI18nRef.current = setI18n
 
       return (
         <>
           <div id="text">{t('你好世界')}</div>
-          <button id="zhBtn" onClick={() => setI18n({ locale: 'zh' })}>
-            简体中文
-          </button>
-          <button id="enBtn" onClick={() => setI18n({ locale: 'en' })}>
-            English
-          </button>
-          <button
-            id="unknownBtn"
-            onClick={() => setI18n({ locale: undefined })}
-          >
-            English
-          </button>
-          <button
-            id="jpBtn"
-            onClick={() =>
-              setI18n({
-                locale: 'jp',
-                langs: {
-                  jp: {
-                    你好世界: 'こんにちは、世界',
-                  },
-                },
-              })
-            }
-          >
-            English
-          </button>
         </>
       )
     }
@@ -135,36 +115,47 @@ describe('Full Test', () => {
     const { container } = render(<App />)
 
     const textWrapper = container.querySelector('#text')
-    const zhBtn = container.querySelector('#zhBtn') as Element
-    const enBtn = container.querySelector('#enBtn') as Element
-    const unknownBtn = container.querySelector('#unknownBtn') as Element
-    const jpBtn = container.querySelector('#jpBtn') as Element
 
     expect(textWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(1)
 
-    fireEvent.click(enBtn)
+    await setI18nRef.current({
+      locale: 'en',
+    })
     expect(textWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(2)
 
-    fireEvent.click(zhBtn)
+    await setI18nRef.current({
+      locale: 'zh',
+    })
     expect(textWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(3)
 
-    fireEvent.click(enBtn)
+    await setI18nRef.current({
+      locale: 'en',
+    })
     expect(textWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(4)
 
-    fireEvent.click(unknownBtn)
+    await setI18nRef.current({
+      locale: 'unknown',
+    })
     expect(textWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(5)
 
-    fireEvent.click(jpBtn)
+    await setI18nRef.current({
+      locale: 'jp',
+      langs: {
+        jp: {
+          你好世界: 'こんにちは、世界',
+        },
+      },
+    })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
     expect(renderCountRef.current).toBe(6)
   })
 
-  it('Nested', () => {
+  it('Nested', async () => {
     const renderCountRef = {
       current: 0,
     }
@@ -173,6 +164,14 @@ describe('Full Test', () => {
     }
 
     const PREFIX = 'nested'
+
+    const outSetI18nRef = {
+      current: {} as SetI18n,
+    }
+
+    const nestedSetI18nRef = {
+      current: {} as SetI18n,
+    }
 
     function getContent(props: {
       prefix?: string
@@ -183,6 +182,12 @@ describe('Full Test', () => {
 
       return function Content() {
         const { t, setI18n } = useI18n()
+
+        if (prefix) {
+          nestedSetI18nRef.current = setI18n
+        } else {
+          outSetI18nRef.current = setI18n
+        }
 
         function getId(id: string) {
           if (!prefix) return id
@@ -278,16 +283,6 @@ describe('Full Test', () => {
 
     const textWrapper = container.querySelector('#text')
     const nestedTextWrapper = container.querySelector('#nestedText')
-    const zhBtn = container.querySelector('#zhBtn') as Element
-    const nestedZhBtn = container.querySelector('#nestedZhBtn') as Element
-    const enBtn = container.querySelector('#enBtn') as Element
-    const nestedEnBtn = container.querySelector('#nestedEnBtn') as Element
-    const unknownBtn = container.querySelector('#unknownBtn') as Element
-    const nestedUnknownBtn = container.querySelector(
-      '#nestedUnknownBtn',
-    ) as Element
-    const jpBtn = container.querySelector('#jpBtn') as Element
-    const nestedJpBtn = container.querySelector('#nestedJpBtn') as Element
 
     expect(textWrapper).toHaveTextContent('你好世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
@@ -296,63 +291,93 @@ describe('Full Test', () => {
 
     // Out Switch
 
-    fireEvent.click(enBtn)
+    await outSetI18nRef.current({
+      locale: 'en',
+    })
     expect(textWrapper).toHaveTextContent('Hello World')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(2)
     expect(nestedRenderCountRef.current).toBe(1)
 
-    fireEvent.click(zhBtn)
+    await outSetI18nRef.current({
+      locale: 'zh',
+    })
     expect(textWrapper).toHaveTextContent('你好世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(3)
     expect(nestedRenderCountRef.current).toBe(1)
 
-    fireEvent.click(enBtn)
+    await outSetI18nRef.current({
+      locale: 'en',
+    })
     expect(textWrapper).toHaveTextContent('Hello World')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(4)
     expect(nestedRenderCountRef.current).toBe(1)
 
-    fireEvent.click(unknownBtn)
+    await outSetI18nRef.current({
+      locale: 'unknown',
+    })
     expect(textWrapper).toHaveTextContent('你好世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(5)
     expect(nestedRenderCountRef.current).toBe(1)
 
-    fireEvent.click(jpBtn)
+    await outSetI18nRef.current({
+      locale: 'jp',
+      langs: {
+        jp: {
+          你好世界: 'こんにちは、世界',
+        },
+      },
+    })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(1)
 
-    // Nested Switch
+    // // Nested Switch
 
-    fireEvent.click(nestedEnBtn)
+    await nestedSetI18nRef.current({
+      locale: 'en',
+    })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(2)
 
-    fireEvent.click(nestedZhBtn)
+    await nestedSetI18nRef.current({
+      locale: 'zh',
+    })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(3)
 
-    fireEvent.click(nestedEnBtn)
+    await nestedSetI18nRef.current({
+      locale: 'en',
+    })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(4)
 
-    fireEvent.click(nestedUnknownBtn)
+    await nestedSetI18nRef.current({
+      locale: 'unknown',
+    })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(5)
 
-    fireEvent.click(nestedJpBtn)
+    await nestedSetI18nRef.current({
+      locale: 'jp',
+      langs: {
+        jp: {
+          你好世界: 'こんにちは、世界',
+        },
+      },
+    })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('こんにちは、世界')
     expect(renderCountRef.current).toBe(6)
