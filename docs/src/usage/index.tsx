@@ -117,15 +117,17 @@ function InitConfig(props: I18nProProps) {
 function ModifyConfig(props: I18nProProps) {
   const { i18nProPkg } = props
 
+  const configName = ' `i18nrc.ts` '
+
   return (
     <>
       <Break />
-      <H2>{`4. ${t('调整{0}配置', ' `i18nrc.js` ')}`}</H2>
+      <H2>{`4. ${t('调整{0}配置', configName)}`}</H2>
       <Link
         href={getI18nProDocHref(
           i18nProPkg,
           'USAGE',
-          `4. ${t('调整{0}配置', ' `i18nrc.js` ')}`,
+          `4. ${t('调整{0}配置', configName)}`,
         )}
       >
         {t('请参考')}

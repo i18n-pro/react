@@ -10,7 +10,7 @@
   &emsp;&emsp;&emsp;&emsp;[配置初始状态](#配置初始状态)<br/>
   &emsp;&emsp;&emsp;&emsp;[接入 `I18nProvider` 和 `useI18n` ，并用 `t` 包裹 `翻译文案` ](#接入-i18nprovider-和-usei18n-并用-t-包裹-翻译文案)<br/>
   &emsp;&emsp;[3. 初始化命令行配置文件](#3-初始化命令行配置文件)<br/>
-  &emsp;&emsp;[4. 调整 `i18nrc.js` 配置](#4-调整-i18nrcjs-配置)<br/>
+  &emsp;&emsp;[4. 调整 `i18nrc.ts` 配置](#4-调整-i18nrcts-配置)<br/>
   &emsp;&emsp;[5. 执行翻译命令](#5-执行翻译命令)<br/>
   &emsp;&emsp;[6. 引入语言包](#6-引入语言包)<br/>
   &emsp;&emsp;[7. 切换语言](#7-切换语言)<br/>
@@ -69,8 +69,8 @@ render(
 ## 3. 初始化命令行配置文件
 [请参考](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/USAGE_zh-CN.md#3-初始化命令行配置文件)
 
-## 4. 调整 `i18nrc.js` 配置
-[请参考](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/USAGE_zh-CN.md#4-调整-i18nrcjs-配置)
+## 4. 调整 `i18nrc.ts` 配置
+[请参考](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/USAGE_zh-CN.md#4-调整-i18nrcts-配置)
 
 ## 5. 执行翻译命令
 [请参考](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/USAGE_zh-CN.md#5-执行翻译命令)
@@ -168,4 +168,4 @@ render(
 
 
 ## 8. Demo
-真实代码示例可参考 `README` 文档中的 [Live Demo](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.0/README_zh-CN.md#live-demo) 
+真实代码示例可参考 `README` 文档中的 [Live Demo](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.1/README_zh-CN.md#live-demo) 

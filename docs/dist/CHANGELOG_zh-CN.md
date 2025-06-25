@@ -2,7 +2,7 @@
 # 更新日志
 
 
-[English](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.0/docs/dist/CHANGELOG.md) | 简体中文
+[English](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.1/docs/dist/CHANGELOG.md) | 简体中文
 
 
 <details >

@@ -17,12 +17,12 @@ export default function LiveDemo() {
         items={[
           'U',
           <Link
-            href={`https://codesandbox.io/p/github/${githubKey}-demo/main?file=${filename}`}
+            href={`https://codesandbox.io/p/github/${githubKey}-demo/v2?file=${filename}`}
           >
             Open in CodeSandbox
           </Link>,
           <Link
-            href={`https://stackblitz.com/github/i18n-pro/react-demo?file=${filename}`}
+            href={`https://stackblitz.com/github/i18n-pro/react-demo/tree/v2?file=${filename}`}
           >
             <Image
               alt="Open in StackBlitz"

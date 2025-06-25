@@ -10,7 +10,7 @@
   &emsp;&emsp;&emsp;&emsp;[Configure initial state](#configure-initial-state)<br/>
   &emsp;&emsp;&emsp;&emsp;[Connect  `I18nProvider`  and  `useI18n` , and wrap  `Translation Text`  with  `t` ](#connect--i18nprovider--and--usei18n--and-wrap--translation-text--with--t)<br/>
   &emsp;&emsp;[3. Initialize Command Line Configuration File](#3-initialize-command-line-configuration-file)<br/>
-  &emsp;&emsp;[4. Adjust  `i18nrc.js`  Configuration](#4-adjust--i18nrcjs--configuration)<br/>
+  &emsp;&emsp;[4. Adjust  `i18nrc.ts`  Configuration](#4-adjust--i18nrcts--configuration)<br/>
   &emsp;&emsp;[5. Execute Translation Command](#5-execute-translation-command)<br/>
   &emsp;&emsp;[6. Importing Language Pack](#6-importing-language-pack)<br/>
   &emsp;&emsp;[7. Switch Language](#7-switch-language)<br/>
@@ -69,8 +69,8 @@ render(
 ## 3. Initialize Command Line Configuration File
 [Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/USAGE.md#3-initialize-command-line-configuration-file)
 
-## 4. Adjust  `i18nrc.js`  Configuration
-[Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/USAGE.md#4-adjust--i18nrcjs--configuration)
+## 4. Adjust  `i18nrc.ts`  Configuration
+[Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/USAGE.md#4-adjust--i18nrcts--configuration)
 
 ## 5. Execute Translation Command
 [Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/USAGE.md#5-execute-translation-command)
@@ -168,4 +168,4 @@ render(
 
 
 ## 8. Demo
-Real code examples can refer to  [Live Demo](https://github.com/i18n-pro/react/tree/v2.0.0-alpha.0#live-demo)  in the  `README`  document
+Real code examples can refer to  [Live Demo](https://github.com/i18n-pro/react/tree/v2.0.0-alpha.1#live-demo)  in the  `README`  document
