@@ -90,6 +90,7 @@ describe('Full Test', () => {
       return (
         <>
           <div id="text">{t('你好世界')}</div>
+          <div id="customKeyText">{t.t('custom-key', '你好世界')}</div>
         </>
       )
     }
@@ -103,6 +104,7 @@ describe('Full Test', () => {
           langs={{
             en: {
               你好世界: 'Hello World',
+              'custom-key': 'Hello World',
             },
           }}
         >
@@ -115,32 +117,38 @@ describe('Full Test', () => {
     const { container } = render(<App />)
 
     const textWrapper = container.querySelector('#text')
+    const customKeyTextWrapper = container.querySelector('#customKeyText')
 
     expect(textWrapper).toHaveTextContent('你好世界')
+    expect(customKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(1)
 
     await setI18nRef.current({
       locale: 'en',
     })
     expect(textWrapper).toHaveTextContent('Hello World')
+    expect(customKeyTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(2)
 
     await setI18nRef.current({
       locale: 'zh',
     })
     expect(textWrapper).toHaveTextContent('你好世界')
+    expect(customKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(3)
 
     await setI18nRef.current({
       locale: 'en',
     })
     expect(textWrapper).toHaveTextContent('Hello World')
+    expect(customKeyTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(4)
 
     await setI18nRef.current({
       locale: 'unknown',
     })
     expect(textWrapper).toHaveTextContent('你好世界')
+    expect(customKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(5)
 
     await setI18nRef.current({
@@ -148,10 +156,12 @@ describe('Full Test', () => {
       langs: {
         jp: {
           你好世界: 'こんにちは、世界',
+          'custom-key': 'こんにちは、世界',
         },
       },
     })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
+    expect(customKeyTextWrapper).toHaveTextContent('こんにちは、世界')
     expect(renderCountRef.current).toBe(6)
   })
 
@@ -204,39 +214,9 @@ describe('Full Test', () => {
         return (
           <>
             <div id={getId('text')}>{t('你好世界')}</div>
-            <button
-              id={getId('zhBtn')}
-              onClick={() => setI18n({ locale: 'zh' })}
-            >
-              简体中文
-            </button>
-            <button
-              id={getId('enBtn')}
-              onClick={() => setI18n({ locale: 'en' })}
-            >
-              English
-            </button>
-            <button
-              id={getId('unknownBtn')}
-              onClick={() => setI18n({ locale: undefined })}
-            >
-              English
-            </button>
-            <button
-              id={getId('jpBtn')}
-              onClick={() =>
-                setI18n({
-                  locale: 'jp',
-                  langs: {
-                    jp: {
-                      你好世界: 'こんにちは、世界',
-                    },
-                  },
-                })
-              }
-            >
-              English
-            </button>
+            <div id={getId('customKeyText')}>
+              {t.t('custom-key', '你好世界')}
+            </div>
             <ChildComponent />
           </>
         )
@@ -252,6 +232,7 @@ describe('Full Test', () => {
           langs={{
             en: {
               你好世界: 'Hello World',
+              'custom-key': 'Hello World',
             },
           }}
         >
@@ -270,6 +251,7 @@ describe('Full Test', () => {
           langs={{
             en: {
               你好世界: 'Hello World',
+              'custom-key': 'Hello World',
             },
           }}
         >
@@ -282,10 +264,16 @@ describe('Full Test', () => {
     const { container } = render(<App />)
 
     const textWrapper = container.querySelector('#text')
+    const customKeyTextWrapper = container.querySelector('#customKeyText')
     const nestedTextWrapper = container.querySelector('#nestedText')
+    const nestedCustomKeyTextWrapper = container.querySelector(
+      '#nestedCustomKeyText',
+    )
 
     expect(textWrapper).toHaveTextContent('你好世界')
+    expect(customKeyTextWrapper).toHaveTextContent('你好世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(1)
     expect(nestedRenderCountRef.current).toBe(1)
 
@@ -295,7 +283,9 @@ describe('Full Test', () => {
       locale: 'en',
     })
     expect(textWrapper).toHaveTextContent('Hello World')
+    expect(customKeyTextWrapper).toHaveTextContent('Hello World')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(2)
     expect(nestedRenderCountRef.current).toBe(1)
 
@@ -303,7 +293,9 @@ describe('Full Test', () => {
       locale: 'zh',
     })
     expect(textWrapper).toHaveTextContent('你好世界')
+    expect(customKeyTextWrapper).toHaveTextContent('你好世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(3)
     expect(nestedRenderCountRef.current).toBe(1)
 
@@ -311,7 +303,9 @@ describe('Full Test', () => {
       locale: 'en',
     })
     expect(textWrapper).toHaveTextContent('Hello World')
+    expect(customKeyTextWrapper).toHaveTextContent('Hello World')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(4)
     expect(nestedRenderCountRef.current).toBe(1)
 
@@ -319,7 +313,9 @@ describe('Full Test', () => {
       locale: 'unknown',
     })
     expect(textWrapper).toHaveTextContent('你好世界')
+    expect(customKeyTextWrapper).toHaveTextContent('你好世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(5)
     expect(nestedRenderCountRef.current).toBe(1)
 
@@ -328,11 +324,14 @@ describe('Full Test', () => {
       langs: {
         jp: {
           你好世界: 'こんにちは、世界',
+          'custom-key': 'こんにちは、世界',
         },
       },
     })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
+    expect(customKeyTextWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(1)
 
@@ -342,7 +341,9 @@ describe('Full Test', () => {
       locale: 'en',
     })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
+    expect(customKeyTextWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('Hello World')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(2)
 
@@ -350,7 +351,9 @@ describe('Full Test', () => {
       locale: 'zh',
     })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
+    expect(customKeyTextWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(3)
 
@@ -358,7 +361,9 @@ describe('Full Test', () => {
       locale: 'en',
     })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
+    expect(customKeyTextWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('Hello World')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('Hello World')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(4)
 
@@ -366,7 +371,9 @@ describe('Full Test', () => {
       locale: 'unknown',
     })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
+    expect(customKeyTextWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('你好世界')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('你好世界')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(5)
 
@@ -375,11 +382,14 @@ describe('Full Test', () => {
       langs: {
         jp: {
           你好世界: 'こんにちは、世界',
+          'custom-key': 'こんにちは、世界',
         },
       },
     })
     expect(textWrapper).toHaveTextContent('こんにちは、世界')
+    expect(customKeyTextWrapper).toHaveTextContent('こんにちは、世界')
     expect(nestedTextWrapper).toHaveTextContent('こんにちは、世界')
+    expect(nestedCustomKeyTextWrapper).toHaveTextContent('こんにちは、世界')
     expect(renderCountRef.current).toBe(6)
     expect(nestedRenderCountRef.current).toBe(6)
   })

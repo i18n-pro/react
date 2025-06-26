@@ -1,7 +1,7 @@
 <div align="center">
   <p style="font-size: 18px;">An out-of-the-box, lightweight i18n auto-translation solution for React</p>
 
-English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.1/README_zh-CN.md)
+English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/README_zh-CN.md)
 
 
 
@@ -36,7 +36,7 @@ To make internationalization easy and enjoyable 😄💪🏻
 * react >= **16.8.0**
 * react-dom >= **16.8.0**
 * react-native >= **0.59.0**
-* i18n-pro >= **3.0.0** <**4.0.0**
+* i18n-pro >= **3.0.0** < **4.0.0**
 
 
 # Features
@@ -105,9 +105,9 @@ render(
 
 >To avoid unnecessary duplicate document content, some of the documents in this library are linked to the content in  `i18n-pro` <br />The  `i18n-pro`  related link in the current document is based on the  `3.0.0-alpha.1`  version. If you are using a different version, you need to check the document corresponding to the version you are using to avoid inconsistent usage
 * Current Library
-   * [Quick Start](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.1/docs/dist/USAGE.md)
-   * [API](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.1/docs/dist/API.md)
-   * [Changelog](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.1/docs/dist/CHANGELOG.md)
+   * [Quick Start](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/docs/dist/USAGE.md)
+   * [API](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/docs/dist/API.md)
+   * [Changelog](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/docs/dist/CHANGELOG.md)
 * i18n-pro
    * [Command Line](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/COMMAND_LINE.md)
    * [Matching Rules](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/MATCH_RULE.md)

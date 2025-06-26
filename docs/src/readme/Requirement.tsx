@@ -10,7 +10,7 @@ export default function Requirement() {
           'react >= **16.8.0**',
           'react-dom >= **16.8.0**',
           'react-native >= **0.59.0**',
-          'i18n-pro >= **3.0.0** <**4.0.0**',
+          'i18n-pro >= **3.0.0** < **4.0.0**',
         ]}
       />
     </>
