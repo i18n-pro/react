@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   '@types/node':
     specifier: ^24.0.3
@@ -77,8 +73,8 @@ devDependencies:
     specifier: ^21.1.0
     version: 21.1.0
   jsx-to-md:
-    specifier: ^0.11.4
-    version: 0.11.4
+    specifier: ^0.12.3
+    version: 0.12.3
   lint-staged:
     specifier: ^13.1.2
     version: 13.1.2
@@ -152,6 +148,17 @@ packages:
       - supports-color
     dev: false
 
+  /@alicloud/credentials@2.4.4:
+    resolution: {integrity: sha512-/eRAGSKcniLIFQ1UCpDhB/IrHUZisQ1sc65ws/c2avxUMpXwH1rWAohb76SVAUJhiF4mwvLzLJM1Mn1XL4Xe/Q==}
+    dependencies:
+      '@alicloud/tea-typescript': 1.8.0
+      httpx: 2.3.3
+      ini: 1.3.8
+      kitx: 2.2.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /@alicloud/darabonba-array@0.1.1:
     resolution: {integrity: sha512-UPP7p9//jywqM8EN6BjSbw1ovl/BzqreXdi5FmxT6m3PmFxsxabe+yamjeopyf2Gi0p3WqwJTBCeNji5eYUsJw==}
     dependencies:
@@ -211,7 +218,7 @@ packages:
   /@alicloud/gateway-pop@0.0.6:
     resolution: {integrity: sha512-KF4I+JvfYuLKc3fWeWYIZ7lOVJ9jRW0sQXdXidZn1DKZ978ncfGf7i0LBfONGk4OxvNb/HD3/0yYhkgZgPbKtA==}
     dependencies:
-      '@alicloud/credentials': 2.4.3
+      '@alicloud/credentials': 2.4.4
       '@alicloud/darabonba-array': 0.1.1
       '@alicloud/darabonba-encode-util': 0.0.2
       '@alicloud/darabonba-map': 0.0.1
@@ -260,7 +267,7 @@ packages:
     resolution: {integrity: sha512-e9WK1lKiMOOziuLgNaYWv7FL50FyrcpO+idoLhNmFR7k0Fax4lPht5suBpTBr1PSINg5R1W3eOCm5vaUTrY4lg==}
     requiresBuild: true
     dependencies:
-      '@alicloud/credentials': 2.4.3
+      '@alicloud/credentials': 2.4.4
       '@alicloud/gateway-pop': 0.0.6
       '@alicloud/gateway-spi': 0.0.8
       '@darabonba/typescript': 1.0.3
@@ -2377,24 +2384,17 @@ packages:
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
     dev: false
 
-  /@types/node@18.19.50:
-    resolution: {integrity: sha512-xonK+NRrMBRtkL1hVCc3G+uXtjh1Al4opBLjqVmipe5ZAaBYWW6cNAiBVZ1BvmkBhep698rP3UM3aRAdSALuhg==}
+  /@types/node@18.19.118:
+    resolution: {integrity: sha512-hIPK0hSrrcaoAu/gJMzN3QClXE4QdCdFvaenJ0JsjIbExP1JFFVH+RHcBt25c9n8bx5dkIfqKE+uw6BmBns7ug==}
     dependencies:
       undici-types: 5.26.5
     dev: true
 
-  /@types/node@20.19.1:
-    resolution: {integrity: sha512-jJD50LtlD2dodAEO653i3YF04NWak6jN3ky+Ri3Em3mGR39/glWiboM/IePaRbgwSfqM1TpGXfAg8ohn/4dTgA==}
-    dependencies:
-      undici-types: 6.21.0
-    dev: false
-
   /@types/node@20.5.1:
     resolution: {integrity: sha512-4tT2UrL5LBqDwoed9wZ6N3umC4Yhz3W3FloMmiiG4JwmUJWpie0c7lcnUNd4gtMKuDEO4wRVS8B6Xa0uMRsMKg==}
-    dev: true
 
-  /@types/node@22.15.32:
-    resolution: {integrity: sha512-3jigKqgSjsH6gYZv2nEsqdXfZqIFGAV36XYYjf9KGZ3PSG+IhLecqPnI310RvjutyMwifE2hhhNEklOUrvx/wA==}
+  /@types/node@22.16.3:
+    resolution: {integrity: sha512-sr4Xz74KOUeYadexo1r8imhRtlVXcs+j3XK3TcoiYk7B1t3YRVJgtaD3cwX73NYb71pmVuMLNRhJ9XKdoDB74g==}
     dependencies:
       undici-types: 6.21.0
     dev: false
@@ -5672,7 +5672,7 @@ packages:
   /httpx@2.3.3:
     resolution: {integrity: sha512-k1qv94u1b6e+XKCxVbLgYlOypVP9MPGpnN5G/vxFf6tDO4V3xpz3d6FUOY/s8NtPgaq5RBVVgSB+7IHpVxMYzw==}
     dependencies:
-      '@types/node': 20.19.1
+      '@types/node': 20.5.1
       debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
@@ -5882,6 +5882,12 @@ packages:
 
   /is-core-module@2.15.1:
     resolution: {integrity: sha512-z0vtXSwucUJtANQWldhbtbt7BnL0vxiFjIdDLAatwhDYty2bad6s+rijD6Ri4YuYJubLzIJLUidCh09e1djEVQ==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      hasown: 2.0.2
+
+  /is-core-module@2.16.1:
+    resolution: {integrity: sha512-UfoeMA6fIJ8wTYFEUjelnaGI67v6+N7qXJEvQuIGa99l4xsCruSYOVSQ0uPANn4dAzm8lkYPaKLrrijLq7x23w==}
     engines: {node: '>= 0.4'}
     dependencies:
       hasown: 2.0.2
@@ -6550,14 +6556,14 @@ packages:
       object.values: 1.2.0
     dev: true
 
-  /jsx-to-md@0.11.4:
-    resolution: {integrity: sha512-Ub7qCLlmRUdRqzNnNnDbjw/kQcK+hjNPoP+l2J1tVljk52XMrSLmvcjvZ19fsBzAtp75nTJfZCon92YMeFEz/A==}
+  /jsx-to-md@0.12.3:
+    resolution: {integrity: sha512-8TmPHlK9Bh4t60oqy39sUn8FYF+3bBbPlMtvJTdig8867Or3MOzF448Ra+yEpDKSbNwo23Yl4rM5+plnoGxHeA==}
     hasBin: true
     dependencies:
-      '@types/node': 18.19.50
+      '@types/node': 18.19.118
       '@types/react': 18.0.28
       shelljs: 0.8.5
-      ts-node-dev: 2.0.0(@types/node@18.19.50)(typescript@4.9.5)
+      ts-node-dev: 2.0.0(@types/node@18.19.118)(typescript@4.9.5)
       tsconfig-paths: 4.2.0
       typescript: 4.9.5
     transitivePeerDependencies:
@@ -6617,7 +6623,7 @@ packages:
   /kitx@2.2.0:
     resolution: {integrity: sha512-tBMwe6AALTBQJb0woQDD40734NKzb0Kzi3k7wQj9ar3AbP9oqhoVrdXPh7rk2r00/glIgd0YbToIUJsnxWMiIg==}
     dependencies:
-      '@types/node': 22.15.32
+      '@types/node': 22.16.3
     dev: false
 
   /klaw@1.3.1:
@@ -7623,7 +7629,7 @@ packages:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.8
+      resolve: 1.22.10
       semver: 5.7.2
       validate-npm-package-license: 3.0.4
 
@@ -8597,7 +8603,7 @@ packages:
     resolution: {integrity: sha512-HFM8rkZ+i3zrV+4LQjwQ0W+ez98pApMGM3HUrN04j3CqzPOzl9nmP15Y8YXNm8QHGv/eacOVEjqhmWpkRV0NAw==}
     engines: {node: '>= 0.10'}
     dependencies:
-      resolve: 1.22.8
+      resolve: 1.22.10
     dev: true
 
   /redent@3.0.0:
@@ -8745,6 +8751,15 @@ packages:
     deprecated: https://github.com/lydell/resolve-url#deprecated
     dev: false
 
+  /resolve@1.22.10:
+    resolution: {integrity: sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==}
+    engines: {node: '>= 0.4'}
+    hasBin: true
+    dependencies:
+      is-core-module: 2.16.1
+      path-parse: 1.0.7
+      supports-preserve-symlinks-flag: 1.0.0
+
   /resolve@1.22.8:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
@@ -8752,6 +8767,7 @@ packages:
       is-core-module: 2.15.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+    dev: false
 
   /resolve@2.0.0-next.5:
     resolution: {integrity: sha512-U7WjGVG9sH8tvjW5SmGbQuui75FiyjAX72HX15DwBBwF9dNiQZRQAg9nnPhYy+TUnE0+VcrttuvNI8oSxZcocA==}
@@ -9816,7 +9832,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-node-dev@2.0.0(@types/node@18.19.50)(typescript@4.9.5):
+  /ts-node-dev@2.0.0(@types/node@18.19.118)(typescript@4.9.5):
     resolution: {integrity: sha512-ywMrhCfH6M75yftYvrvNarLEY+SUXtUvU8/0Z6llrHQVBx12GiFk5sStF8UdfE/yfzk9IAq7O5EEbTQsxlBI8w==}
     engines: {node: '>=0.8.0'}
     hasBin: true
@@ -9831,11 +9847,11 @@ packages:
       dynamic-dedupe: 0.3.0
       minimist: 1.2.8
       mkdirp: 1.0.4
-      resolve: 1.22.8
+      resolve: 1.22.10
       rimraf: 2.7.1
       source-map-support: 0.5.21
       tree-kill: 1.2.2
-      ts-node: 10.9.2(@types/node@18.19.50)(typescript@4.9.5)
+      ts-node: 10.9.2(@types/node@18.19.118)(typescript@4.9.5)
       tsconfig: 7.0.0
       typescript: 4.9.5
     transitivePeerDependencies:
@@ -9844,7 +9860,7 @@ packages:
       - '@types/node'
     dev: true
 
-  /ts-node@10.9.2(@types/node@18.19.50)(typescript@4.9.5):
+  /ts-node@10.9.2(@types/node@18.19.118)(typescript@4.9.5):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -9863,7 +9879,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 18.19.50
+      '@types/node': 18.19.118
       acorn: 8.12.1
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -10725,3 +10741,7 @@ packages:
     resolution: {integrity: sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==}
     engines: {node: '>=12.20'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
