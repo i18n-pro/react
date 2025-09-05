@@ -1,3 +1,4 @@
 {
-  "Lingma.PreferredLanguage forCommitMessage": "English"
+  "Lingma.PreferredLanguage forCommitMessage": "English",
+  "prettier.configPath": ".prettierrc.cjs"
 }

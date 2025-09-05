@@ -27,7 +27,7 @@ export default function Principle() {
       <Break />
       {t('简易示例如下')}
       <CodeBlock
-        langType="typescript react"
+        langType="jsx"
         code={`
 import React from 'react'
 import { render } from 'react-dom'
@@ -36,7 +36,14 @@ import { I18nProvider, useI18n } from '@i18n-pro/react'
 function App() {
   const { t } = useI18n()
 
-  return <>{t('hello world')}</>
+  return (
+    <>
+      {/** ${t('文案即 key')} */}
+      <div>{t('hello world')}</div>
+      {/** ${t('自定义 key')} */}
+      <div>{t.t('custom-key', 'hello world')}</div>
+    </>
+  )
 }
 
 render(
@@ -46,9 +53,11 @@ render(
     langs={{
       zh: {
         'hello world': '你好世界',
+        'custom-key': '你好世界',
       },
       ja:{
         "hello world": "こんにちは世界",
+        'custom-key': 'こんにちは世界',
       },
     }}
   >

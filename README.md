@@ -1,7 +1,7 @@
 <div align="center">
   <p style="font-size: 18px;">An out-of-the-box, lightweight i18n auto-translation solution for React</p>
 
-English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/README_zh-CN.md)
+English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.3/README_zh-CN.md)
 
 
 
@@ -30,7 +30,8 @@ English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/R
 
 
 # Vision
-To make internationalization easy and enjoyable 😄💪🏻
+Make internationalization easy and enjoyable 😄💪🏻
+
 # Requirement
 
 * react >= **16.8.0**
@@ -51,8 +52,8 @@ To make internationalization easy and enjoyable 😄💪🏻
 
 # Live Demo
 
-* [Open in CodeSandbox](https://codesandbox.io/p/github/i18n-pro/react-demo/v2?file=README.md)
-* [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg "Open in StackBlitz")](https://stackblitz.com/github/i18n-pro/react-demo/tree/v2?file=README.md)
+* [Open in CodeSandbox](https://codesandbox.io/p/github/i18n-pro/react-demo/main?file=README.md)
+* [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg "Open in StackBlitz")](https://stackblitz.com/github/i18n-pro/react-demo/tree/main?file=README.md)
 
 
 # Principle
@@ -71,7 +72,7 @@ Mainly composed of  `2`  parts
 
 
 A simple example is as follows
-```typescript react
+```jsx
 import React from 'react'
 import { render } from 'react-dom'
 import { I18nProvider, useI18n } from '@i18n-pro/react'
@@ -79,7 +80,14 @@ import { I18nProvider, useI18n } from '@i18n-pro/react'
 function App() {
   const { t } = useI18n()
 
-  return <>{t('hello world')}</>
+  return (
+    <>
+      {/** text-as-key */}
+      <div>{t('hello world')}</div>
+      {/** custom-key */}
+      <div>{t.t('custom-key', 'hello world')}</div>
+    </>
+  )
 }
 
 render(
@@ -89,9 +97,11 @@ render(
     langs={{
       zh: {
         'hello world': '你好世界',
+        'custom-key': '你好世界',
       },
       ja:{
         "hello world": "こんにちは世界",
+        'custom-key': 'こんにちは世界',
       },
     }}
   >
@@ -104,16 +114,16 @@ render(
 # Help Document
 
 > To avoid unnecessary duplicate document content, some of the documents in this library are linked to the content in  `i18n-pro` <br/>
-> The  `i18n-pro`  related link in the current document is based on the  `3.0.0-alpha.1`  version. If you are using a different version, you need to check the document corresponding to the version you are using to avoid inconsistent usage<br/>
+> The  `i18n-pro`  related link in the current document is based on the  `3.0.0-alpha.3`  version. If you are using a different version, you need to check the document corresponding to the version you are using to avoid inconsistent usage<br/>
 * Current Library
-   * [Quick Start](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/docs/dist/USAGE.md)
-   * [API](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/docs/dist/API.md)
-   * [Changelog](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/docs/dist/CHANGELOG.md)
+   * [Quick Start](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.3/docs/dist/USAGE.md)
+   * [API](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.3/docs/dist/API.md)
+   * [Changelog](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.3/docs/dist/CHANGELOG.md)
 * i18n-pro
-   * [Command Line](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/COMMAND_LINE.md)
-   * [Matching Rules](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/MATCH_RULE.md)
-   * [Q&A](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/Q&A.md)
-   * [Translation log](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/OUTPUT_LOG.md)
+   * [Command Line](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/COMMAND_LINE.md)
+   * [Matching Rules](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/MATCH_RULE.md)
+   * [Q&A](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/Q&A.md)
+   * [Translation log](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/OUTPUT_LOG.md)
 
 
 # License

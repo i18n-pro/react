@@ -94,13 +94,13 @@ export function getIssueText(
   return `${text}${showIssue}${showBy}`
 }
 
-function getText(text: string, normal = false) {
+export function getText(text: string, normal = false) {
   if (normal) return text
   return ` \`${text}\` `
 }
 
 export function getTranslationText(normal = false) {
-  const text = t('翻译文案')
+  const text = t('文案')
   return getText(text, normal)
 }
 
@@ -141,10 +141,10 @@ function requestCache<T>(key: string, request: () => Promise<T>): Promise<T> {
 
 export async function getI18nProFileImpl(path?: string): Promise<string> {
   // const base = 'https://jsd.linux.sh.cn/gh/i18n-pro/core@main'
-  const base = 'https://fastly.jsdelivr.net/gh/i18n-pro/core@3.0.0-alpha.1'
+  const base = 'https://fastly.jsdelivr.net/gh/i18n-pro/core@3.0.0-alpha.3'
   // const base = 'https://raw.githubusercontent.com/i18n-pro/core/main'
 
-  let res = t(`获取文件${path}错误`)
+  let res = `获取文件${path}错误`
   try {
     console.log('request', path)
     res = (await fetch(`${base}${path}`, {

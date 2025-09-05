@@ -2,7 +2,7 @@
 # API
 
 > 为了避免不必要的重复文档内容，该库的部分文档是链接 `i18n-pro` 中的内容<br/>
-> 当前文档中 `i18n-pro` 相关链接是基于 `3.0.0-alpha.1` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致<br/>
+> 当前文档中 `i18n-pro` 相关链接是基于 `3.0.0-alpha.3` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致<br/>
 <details >
   <summary>目录</summary>
 
@@ -19,12 +19,12 @@
 <h3 id="i18nprovider-类型">类型</h3>
 <pre>
 (
-  props: <a href="https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/API_zh-CN.md#i18nstate">I18nState</a> & { children: React.ReactNode },
+  props: <a href="https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/API_zh-CN.md#i18nstate">I18nState</a> & { children: React.ReactNode },
 ) => JSX.Element
 </pre>
 
 <h3 id="i18nprovider-参数说明">参数说明</h3>
-其他参数与 <a href="https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/API_zh-CN.md#initi18n">initI18n</a> 参数一致<table>
+其他参数与 <a href="https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/API_zh-CN.md#initi18n">initI18n</a> 参数一致<table>
   <tr>
     <th>参数名</th>
     <th>说明</th>
@@ -42,9 +42,9 @@
 <h3 id="usei18n-类型">类型</h3>
 <pre>
 () => ({
-  <a href="https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/API_zh-CN.md#t">t</a>,
-  <a href="https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/API_zh-CN.md#seti18n">setI18n</a>,
-  <a href="https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/API_zh-CN.md#i18nstate">i18nState</a>,
+  <a href="https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/API_zh-CN.md#t">t</a>,
+  <a href="https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/API_zh-CN.md#seti18n">setI18n</a>,
+  <a href="https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/API_zh-CN.md#i18nstate">i18nState</a>,
 })
 </pre>
 

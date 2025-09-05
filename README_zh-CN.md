@@ -1,7 +1,7 @@
 <div align="center">
   <p style="font-size: 18px;">开箱即用的轻量级 React 国际化自动翻译解决方案</p>
 
-[English](https://github.com/i18n-pro/react/tree/v2.0.0-alpha.2#readme) | 简体中文
+[English](https://github.com/i18n-pro/react/tree/v2.0.0-alpha.3#readme) | 简体中文
 
 
 
@@ -31,6 +31,7 @@
 
 # 愿景
 为了让接入国际化成为轻松且愉快的事😄💪🏻
+
 # 要求
 
 * react >= **16.8.0**
@@ -51,8 +52,8 @@
 
 # Live Demo
 
-* [Open in CodeSandbox](https://codesandbox.io/p/github/i18n-pro/react-demo/v2?file=README_zh-CN.md)
-* [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg "Open in StackBlitz")](https://stackblitz.com/github/i18n-pro/react-demo/tree/v2?file=README_zh-CN.md)
+* [Open in CodeSandbox](https://codesandbox.io/p/github/i18n-pro/react-demo/main?file=README_zh-CN.md)
+* [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg "Open in StackBlitz")](https://stackblitz.com/github/i18n-pro/react-demo/tree/main?file=README_zh-CN.md)
 
 
 # 原理
@@ -71,7 +72,7 @@
 
 
 简易示例如下
-```typescript react
+```jsx
 import React from 'react'
 import { render } from 'react-dom'
 import { I18nProvider, useI18n } from '@i18n-pro/react'
@@ -79,7 +80,14 @@ import { I18nProvider, useI18n } from '@i18n-pro/react'
 function App() {
   const { t } = useI18n()
 
-  return <>{t('hello world')}</>
+  return (
+    <>
+      {/** 文案即 key */}
+      <div>{t('hello world')}</div>
+      {/** 自定义 key */}
+      <div>{t.t('custom-key', 'hello world')}</div>
+    </>
+  )
 }
 
 render(
@@ -89,9 +97,11 @@ render(
     langs={{
       zh: {
         'hello world': '你好世界',
+        'custom-key': '你好世界',
       },
       ja:{
         "hello world": "こんにちは世界",
+        'custom-key': 'こんにちは世界',
       },
     }}
   >
@@ -104,16 +114,16 @@ render(
 # 帮助文档
 
 > 为了避免不必要的重复文档内容，该库的部分文档是链接 `i18n-pro` 中的内容<br/>
-> 当前文档中 `i18n-pro` 相关链接是基于 `3.0.0-alpha.1` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致<br/>
+> 当前文档中 `i18n-pro` 相关链接是基于 `3.0.0-alpha.3` 版本，如果你使用的非该版本，需查看你所使用版本对应的文档，以免用法不一致<br/>
 * 当前库
-   * [快速上手](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/docs/dist/USAGE_zh-CN.md)
-   * [API](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/docs/dist/API_zh-CN.md)
-   * [更新日志](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.2/docs/dist/CHANGELOG_zh-CN.md)
+   * [快速上手](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.3/docs/dist/USAGE_zh-CN.md)
+   * [API](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.3/docs/dist/API_zh-CN.md)
+   * [更新日志](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.3/docs/dist/CHANGELOG_zh-CN.md)
 * i18n-pro
-   * [命令行](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/COMMAND_LINE_zh-CN.md)
-   * [匹配规则](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/MATCH_RULE_zh-CN.md)
-   * [Q&A](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/Q&A_zh-CN.md)
-   * [翻译日志](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.1/docs/dist/OUTPUT_LOG_zh-CN.md)
+   * [命令行](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/COMMAND_LINE_zh-CN.md)
+   * [匹配规则](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/MATCH_RULE_zh-CN.md)
+   * [Q&A](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/Q&A_zh-CN.md)
+   * [翻译日志](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/OUTPUT_LOG_zh-CN.md)
 
 
 # License
