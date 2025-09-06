@@ -59,7 +59,7 @@ function V_2_0_0() {
   return (
     <Template
       version="2.0.0"
-      date="2025-06-xx"
+      date="2025-09-06"
       api={{
         changed: ['U', t('适配{0}', ' `i18n-pro@3` ')],
       }}

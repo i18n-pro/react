@@ -2,13 +2,13 @@
 # 更新日志
 
 
-[English](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.3/docs/dist/CHANGELOG.md) | 简体中文
+[English](https://github.com/i18n-pro/react/blob/v2.0.0/docs/dist/CHANGELOG.md) | 简体中文
 
 
 <details >
   <summary>目录</summary>
 
-  &emsp;&emsp;[[2.0.0] - 2025-06-xx](#200---2025-06-xx)<br/>
+  &emsp;&emsp;[[2.0.0] - 2025-09-06](#200---2025-09-06)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#200-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Changed](#200-api-changed)<br/>
   &emsp;&emsp;[[1.0.2] - 2025-06-23](#102---2025-06-23)<br/>
@@ -24,7 +24,7 @@
 
 </details>
 
-## [2.0.0] - 2025-06-xx
+## [2.0.0] - 2025-09-06
 
 <h3 id="200-api">API</h3>
 

@@ -2,7 +2,7 @@
 # Quick Start
 
 > To avoid unnecessary duplicate document content, some of the documents in this library are linked to the content in  `i18n-pro` <br/>
-> The  `i18n-pro`  related link in the current document is based on the  `3.0.0-alpha.3`  version. If you are using a different version, you need to check the document corresponding to the version you are using to avoid inconsistent usage<br/>
+> The  `i18n-pro`  related link in the current document is based on the  `3.0.0`  version. If you are using a different version, you need to check the document corresponding to the version you are using to avoid inconsistent usage<br/>
 <details >
   <summary>Table of Contents</summary>
 
@@ -75,18 +75,18 @@ render(
 
 
 ## 3. Initialize Command Line Configuration File
-[Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/USAGE.md#3-initialize-command-line-configuration-file)
+[Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0/docs/dist/USAGE.md#3-initialize-command-line-configuration-file)
 
 ## 4. Adjust  `i18nrc.ts`  Configuration
-[Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/USAGE.md#4-adjust--i18nrcts--configuration)
+[Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0/docs/dist/USAGE.md#4-adjust--i18nrcts--configuration)
 
 ## 5. Execute Translation Command
-[Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/USAGE.md#5-execute-translation-command)
+[Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0/docs/dist/USAGE.md#5-execute-translation-command)
 
 ## 6. Import Language Pack
 The language pack already exists, so it needs to be applied to the project
 
-> Currently,  `3`  methods are supported for importing language pack. This documentation only covers the  `Static import`  method. For more methods, [Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0-alpha.3/docs/dist/USAGE.md#6-import-language-pack)<br/>
+> Currently,  `3`  methods are supported for importing language pack. This documentation only covers the  `Static import`  method. For more methods, [Please refer to](https://github.com/i18n-pro/core/blob/v3.0.0/docs/dist/USAGE.md#6-import-language-pack)<br/>
 
 If the generated language pack is a separate file form （`output.langType == 'multiple'`） for each language, the operation is as follows:
 ```diff
@@ -180,4 +180,4 @@ render(
 
 
 ## 8. Demo
-Real code examples can refer to  [Live Demo](https://github.com/i18n-pro/react/tree/v2.0.0-alpha.3#live-demo)  in the  `README`  document
+Real code examples can refer to  [Live Demo](https://github.com/i18n-pro/react/tree/v2.0.0#live-demo)  in the  `README`  document

@@ -2,13 +2,13 @@
 # Changelog
 
 
-English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.3/docs/dist/CHANGELOG_zh-CN.md)
+English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.0/docs/dist/CHANGELOG_zh-CN.md)
 
 
 <details >
   <summary>Table of Contents</summary>
 
-  &emsp;&emsp;[[2.0.0] - 2025-06-xx](#200---2025-06-xx)<br/>
+  &emsp;&emsp;[[2.0.0] - 2025-09-06](#200---2025-09-06)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#200-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Changed](#200-api-changed)<br/>
   &emsp;&emsp;[[1.0.2] - 2025-06-23](#102---2025-06-23)<br/>
@@ -24,7 +24,7 @@ English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.0-alpha.3/d
 
 </details>
 
-## [2.0.0] - 2025-06-xx
+## [2.0.0] - 2025-09-06
 
 <h3 id="200-api">API</h3>
 

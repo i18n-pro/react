@@ -5,8 +5,8 @@ dependencies:
     specifier: ^24.0.3
     version: 24.0.3
   i18n-pro:
-    specifier: 3.0.0-alpha.1
-    version: 3.0.0-alpha.1
+    specifier: 3.0.0
+    version: 3.0.0
   react:
     specifier: 16.8.0
     version: 16.8.0
@@ -137,17 +137,6 @@ packages:
       - supports-color
     dev: false
 
-  /@alicloud/credentials@2.4.3:
-    resolution: {integrity: sha512-r2thNtthchTz/c8/HryGSey1vY0UZx2FkAvb+vd+j7xhD/v/KUwnp8RJNQKNG3E4kfs4wSx2bgDSkcPAiXHQLQ==}
-    dependencies:
-      '@alicloud/tea-typescript': 1.8.0
-      httpx: 2.3.3
-      ini: 1.3.8
-      kitx: 2.2.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /@alicloud/credentials@2.4.4:
     resolution: {integrity: sha512-/eRAGSKcniLIFQ1UCpDhB/IrHUZisQ1sc65ws/c2avxUMpXwH1rWAohb76SVAUJhiF4mwvLzLJM1Mn1XL4Xe/Q==}
     dependencies:
@@ -236,7 +225,7 @@ packages:
   /@alicloud/gateway-spi@0.0.8:
     resolution: {integrity: sha512-KM7fu5asjxZPmrz9sJGHJeSU+cNQNOxW+SFmgmAIrITui5hXL2LB+KNRuzWmlwPjnuA2X3/keq9h6++S9jcV5g==}
     dependencies:
-      '@alicloud/credentials': 2.4.3
+      '@alicloud/credentials': 2.4.4
       '@alicloud/tea-typescript': 1.8.0
     transitivePeerDependencies:
       - supports-color
@@ -253,7 +242,7 @@ packages:
   /@alicloud/openapi-client@0.4.14:
     resolution: {integrity: sha512-NiMDBszCyiH5HI9vHbkDhhDbFF3gMEJDHuPc2cAP0queLtrjPfU+d6/uhGVt44B9oC0q6f6vaJgptQ99fxxfnQ==}
     dependencies:
-      '@alicloud/credentials': 2.4.3
+      '@alicloud/credentials': 2.4.4
       '@alicloud/gateway-spi': 0.0.8
       '@alicloud/openapi-util': 0.3.2
       '@alicloud/tea-typescript': 1.8.0
@@ -327,7 +316,7 @@ packages:
   /@alicloud/oss-client@1.1.4:
     resolution: {integrity: sha512-xbFcZtcCJhR7UAdWnvccd9VJe4HD+Q+ovpdgbAzqHzWppjhiIKEXs9GEWS3kqclyoNzpz7lRG67GJA2KDzRtjA==}
     dependencies:
-      '@alicloud/credentials': 2.4.3
+      '@alicloud/credentials': 2.4.4
       '@alicloud/oss-baseclient': 1.2.0
       '@alicloud/oss-util': 0.0.3
       '@alicloud/rpc-util': 0.0.1
@@ -5694,8 +5683,8 @@ packages:
     hasBin: true
     dev: true
 
-  /i18n-pro@3.0.0-alpha.1:
-    resolution: {integrity: sha512-b3oueUfT+zjSZfpTLoU8MephNLB4Uwi9JiHydFIpsiCQ4wqAOulfdAeYc23uRNOi6WZUXuCghmxhWW3EQn1cKw==}
+  /i18n-pro@3.0.0:
+    resolution: {integrity: sha512-bOKOWnyt8QlP2S7KpFBGslM9Z/x5lyLBOfTLkIrhtn/cQj3ZuljdMRzIl3v9EygVALQIWRa2p7y62ZjN7d/ciw==}
     hasBin: true
     dependencies:
       '@alicloud/alimt20181012': 1.4.0
@@ -8276,7 +8265,7 @@ packages:
     resolution: {integrity: sha512-AwAuY4g9nxx0u52DnSMkqqgyLHaW/XaPLtaAo3y/ZCfeaQB/g4YDH4kb8Wc/mWzWvu0YjOznVnfn373MVZZrgw==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      protobufjs: 7.2.4
+      protobufjs: 7.5.3
     dev: false
 
   /protobufjs-cli@1.1.1(protobufjs@7.2.4):
