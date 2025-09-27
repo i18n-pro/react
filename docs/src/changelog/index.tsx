@@ -1,5 +1,5 @@
-import React, { H1, TableOfContents } from 'jsx-to-md'
-import { initI18n, renderLanguage } from '../utils'
+import React, { CodeBlock, H1, TableOfContents } from 'jsx-to-md'
+import { getText, initI18n, renderLanguage } from '../utils'
 import Template from './ChangeLog'
 
 function V_1_0_0() {
@@ -67,6 +67,44 @@ function V_2_0_0() {
   )
 }
 
+function V_2_0_1() {
+  return (
+    <Template
+      version="2.0.1"
+      date="2025-09-27"
+      api={{
+        fixed: [
+          'U',
+          <>
+            {t(
+              '修复在 {0} 状态变化后，{1} 未及时更新，导致部分场景下切换语言后文案未生效的问题',
+              getText('i18nState'),
+              getText('t'),
+            )}
+            <CodeBlock
+              langType="jsx"
+              code={`function Demo(){
+  const { t } = useI18n()
+
+  // ${t('t 未更新，切换语言后不会变化')}
+  const text = useMemo(() => {
+    return t('hello world')
+  }, [t])
+
+  return (
+    <>
+      <div>{text}</div>
+    </>
+  )
+}`}
+            />
+          </>,
+        ],
+      }}
+    />
+  )
+}
+
 export default function ChangeLog(props) {
   initI18n(props)
 
@@ -75,6 +113,7 @@ export default function ChangeLog(props) {
       <H1 skip>{t('更新日志')}</H1>
       {renderLanguage('CHANGELOG')}
       <TableOfContents text={t('目录')} open={false} />
+      <V_2_0_1 />
       <V_2_0_0 />
       <V_1_0_2 />
       <V_1_0_1 />

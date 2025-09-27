@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useMemo } from 'react'
 import type { SetI18n } from '../src'
 import { describe, it, expect, vi } from 'vitest'
 import { render, fireEvent } from '@testing-library/react'
@@ -87,9 +87,13 @@ describe('Full Test', () => {
       renderCountRef.current++
       setI18nRef.current = setI18n
 
+      const text = useMemo(() => {
+        return t('你好世界')
+      }, [t])
+
       return (
         <>
-          <div id="text">{t('你好世界')}</div>
+          <div id="text">{text}</div>
           <div id="customKeyText">{t.t('custom-key', '你好世界')}</div>
         </>
       )

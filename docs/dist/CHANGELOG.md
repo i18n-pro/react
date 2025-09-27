@@ -2,12 +2,15 @@
 # Changelog
 
 
-English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.0/docs/dist/CHANGELOG_zh-CN.md)
+English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.1/docs/dist/CHANGELOG_zh-CN.md)
 
 
 <details >
   <summary>Table of Contents</summary>
 
+  &emsp;&emsp;[[2.0.1] - 2025-09-27](#201---2025-09-27)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#201-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#201-api-fixed)<br/>
   &emsp;&emsp;[[2.0.0] - 2025-09-06](#200---2025-09-06)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#200-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Changed](#200-api-changed)<br/>
@@ -23,6 +26,32 @@ English | [简体中文](https://github.com/i18n-pro/react/blob/v2.0.0/docs/dist
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#100-api-added)<br/>
 
 </details>
+
+## [2.0.1] - 2025-09-27
+
+<h3 id="201-api">API</h3>
+
+<h4 id="201-api-fixed">Fixed</h4>
+
+* Fixed the issue where  `t`  was not updated in time after  `i18nState`  changed, resulting in text not updating when switching languages in some scenarios
+```jsx
+function Demo(){
+  const { t } = useI18n()
+
+  // t has not been updated, and it will not change after switching languages
+  const text = useMemo(() => {
+    return t('hello world')
+  }, [t])
+
+  return (
+    <>
+      <div>{text}</div>
+    </>
+  )
+}
+```
+
+
 
 ## [2.0.0] - 2025-09-06
 

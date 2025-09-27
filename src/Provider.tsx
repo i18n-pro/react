@@ -22,7 +22,7 @@ export default function Provider(props: ProviderProps) {
   const proxyValue = useMemo(() => {
     return {
       setI18n: setI18nProxy,
-      t,
+      t: t.withLocale(),
       i18nState: state,
     }
   }, [state])

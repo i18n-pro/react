@@ -2,12 +2,15 @@
 # 更新日志
 
 
-[English](https://github.com/i18n-pro/react/blob/v2.0.0/docs/dist/CHANGELOG.md) | 简体中文
+[English](https://github.com/i18n-pro/react/blob/v2.0.1/docs/dist/CHANGELOG.md) | 简体中文
 
 
 <details >
   <summary>目录</summary>
 
+  &emsp;&emsp;[[2.0.1] - 2025-09-27](#201---2025-09-27)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#201-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#201-api-fixed)<br/>
   &emsp;&emsp;[[2.0.0] - 2025-09-06](#200---2025-09-06)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#200-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Changed](#200-api-changed)<br/>
@@ -23,6 +26,32 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#100-api-added)<br/>
 
 </details>
+
+## [2.0.1] - 2025-09-27
+
+<h3 id="201-api">API</h3>
+
+<h4 id="201-api-fixed">Fixed</h4>
+
+* 修复在  `i18nState`  状态变化后， `t`  未及时更新，导致部分场景下切换语言后文案未生效的问题
+```jsx
+function Demo(){
+  const { t } = useI18n()
+
+  // t 未更新，切换语言后不会变化
+  const text = useMemo(() => {
+    return t('hello world')
+  }, [t])
+
+  return (
+    <>
+      <div>{text}</div>
+    </>
+  )
+}
+```
+
+
 
 ## [2.0.0] - 2025-09-06
 

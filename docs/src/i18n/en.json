@@ -66,5 +66,7 @@
   "文案": "text",
   "至此，国际化功能已集成完毕。只需将 {0} 设置为目标语言，即可在页面上展示对应的翻译内容。后续如有新增{1}（需用 {2} 函数包裹），只需重新执行 {3} 命令生成最新语言包，即可确保所有新增内容均被翻译": "At this point, the internationalization function has been integrated. Simply set {0} as the target language to display the corresponding translated content on the page. If there is a new {1} (requires a {2} function wrap), just re-execute the {3} command to generate the latest language pack to ensure that all new content is translated.",
   "当前支持{0}种引入语言包的方式，本文档只介绍{1}的方式，更多方式{2}": "Currently, {0} methods are supported for importing language pack. This documentation only covers the {1} method. For more methods, {2}",
-  "静态导入": "Static import"
+  "静态导入": "Static import",
+  "修复在 {0} 状态变化后，{1} 未及时更新，导致部分场景下切换语言后文案未生效的问题": "Fixed the issue where {1} was not updated in time after {0} changed, resulting in text not updating when switching languages in some scenarios",
+  "t 未更新，切换语言后不会变化": "t has not been updated, and it will not change after switching languages"
 }
